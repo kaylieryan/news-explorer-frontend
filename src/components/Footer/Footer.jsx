@@ -18,15 +18,15 @@ function Footer() {
           TripleTen
         </a>
         <a
-          href="https://github.com/Andrew-W01"
+          href="https://github.com/kaylieryan"
           target="_blank"
           className="footer__link footer__link-github">
           <img src={github} alt="" className="footer__icon" />
         </a>
         <a
-          href="#"
+          href="https://facebook.com/"
           target="_blank"
-          className="footer__link footer__link-linkedin">
+          className="footer__link footer__link-facebook">
           <img src={facebook} alt="" className="footer__icon" />
         </a>
       </div>
