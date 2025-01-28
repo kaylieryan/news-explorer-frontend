@@ -1,35 +1,53 @@
 import "./Footer.css";
-import facebook from "../../assets/images/facebook.svg";
-import github from "../../assets/images/github.svg";
-import { Link } from "react-router-dom";
+import githubLogo from "../../assets/github.svg";
+import facebookLogo from "../../assets/facebook.svg";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__copyright">© 2024 Supersite, Powered by News API</p>
-      <div className="footer__links-container">
-        <Link to="/" className="footer__link footer__link-home">
-          <p className="footer__home">Home</p>
-        </Link>
-        <a
-          href="https://tripleten.com/"
-          target="_blank"
-          className="footer__link footer__link-tripleten">
-          TripleTen
-        </a>
-        <a
-          href="https://github.com/kaylieryan"
-          target="_blank"
-          className="footer__link footer__link-github">
-          <img src={github} alt="" className="footer__icon" />
-        </a>
-        <a
-          href="https://facebook.com/"
-          target="_blank"
-          className="footer__link footer__link-facebook">
-          <img src={facebook} alt="" className="footer__icon" />
-        </a>
-      </div>
+      <p className="footer__copyright">
+        &copy; {new Date().getFullYear()} Supersite, Powered by News API
+      </p>
+      <nav className="footer__links-wrapper">
+        <ul className="footer__links">
+          <li>
+            <a href="#" className="footer__link-home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://tripleten.com/"
+              className="footer__link-triplenTen">
+              TriplenTen
+            </a>
+          </li>
+        </ul>
+        <ul className="footer__social-links">
+          <li>
+            <a
+              href="https://github.com/kaylieryan"
+              className="footer__link-github">
+              <img
+                src={githubLogo}
+                alt="GitHub Logo"
+                className="footer__link-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              className="footer__link-facebook">
+              <img
+                src={facebookLogo}
+                alt="Facebook Logo"
+                className="footer__link-icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   );
 }
