@@ -1,171 +1,327 @@
 .nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  padding: 19px 104px 0 104px;
+  padding: 20px 104px;
+  border-bottom: 1px solid rgba(246, 244, 244, 0.7);
+  color: #fff;
 }
 
-.nav[data-theme="dark"] {
-  --primary: #fff;
-  --border: rgba(255, 255, 255, 0.2);
+.nav__saved-news-nav {
+  background-color: white;
 }
 
-.nav[data-theme="light"] {
-  --primary: black;
-  --border: #d1d2d6;
+.nav__menu-open {
+  background-color: #1a1b22;
+  min-height: 10px;
+  overflow: visible;
 }
 
-.nav__logo {
-  font-family: "Roboto-Slab", "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0;
-  color: var(--primary);
+.nav__logo-white {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-bottom: 11px;
 }
 
-.nav__menu-btn {
+.nav__user-container {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.nav__menu-button {
   display: none;
 }
 
-.nav__list-item {
-  text-decoration: none;
+.nav__saved-news-menu-button {
+  display: none;
 }
 
-.nav__list {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding-inline-start: 0;
-}
-
-.nav__signin-btn {
-  width: 176px;
-  height: 48px;
-  border-radius: 100px;
+.nav__button-home {
+  border: none;
   background: none;
-  font-family: "Roboto-500", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  color: var(--primary);
-  border-color: (var(--border));
-  padding: 0;
-}
-
-.nav__signin-btn:hover {
   cursor: pointer;
-}
-
-.nav__link {
-  font-family: "Roboto-500", "Arial", sans-serif;
+  color: #ffffff;
   font-size: 18px;
+  font-style: normal;
   font-weight: 500;
+  font-family: "Roboto", Arial, sans-serif;
   line-height: 24px;
-  text-align: center;
   text-decoration: none;
-  color: var(--primary);
+  position: relative;
 }
 
-.nav__link_focused {
-  border-bottom: solid;
-  border-color: (var(--primary));
-  padding-bottom: 24px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-width: 3px;
-}
-
-.nav__signout-div {
+.nav__button-signin {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  border-radius: 100px;
-  border-width: 1px;
-  border: solid;
-  height: 48px;
-  width: 112px;
+  cursor: pointer;
   background: transparent;
-  padding: 0;
-  color: var(--primary);
-}
-
-.nav__signout-name {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 18px;
+  border-radius: 100px;
+  padding: 12px;
+  width: 176px;
+  height: 48px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
   font-weight: 500;
+  font-size: 18px;
   line-height: 24px;
 }
 
-.nav__signout-btn {
-  border: none;
-  background-image: url("../../assets/logout-black.svg");
-  height: 24px;
-  width: 24px;
-  background-size: cover;
-  background-color: transparent;
+.nav__button-home.active::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  border-bottom: 3px solid #ffffff;
+  left: -5px;
+  bottom: -34px;
 }
 
-.nav__signout-btn:hover {
+.nav__saved-news {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav__button-saved-articles {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav__saved__news-button-home {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Roboto;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav__button-saved-articles-user {
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  max-height: 80px;
+  width: 178px;
+}
+
+.nav__button-saved-articles-user.active::after {
+  content: "";
+  position: absolute;
+  width: 178px;
+  height: 2px;
+  border-bottom: 3px solid black;
+  margin-bottom: -89px;
+}
+
+.nav__button-loggedin {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 25px;
+  height: 50px;
   cursor: pointer;
 }
 
-.nav__signout-btn--white {
-  background-image: url("../../assets/logout-white.svg");
+.nav__button-loggedin-black {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 25px;
+  height: 50px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nav__button-loggedin-white {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.nav__username {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.nav__button-signin.active,
+.nav__button-signin:hover {
+  border: 1px solid #ffffff;
+}
+
+.nav__logout-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-  .nav__link {
-    font-size: 16px;
+  .nav {
+    padding: 5px 30px;
+    max-width: 768px;
   }
 
-  .nav__signin-btn {
+  .nav__user-container {
+    gap: 20px;
+  }
+
+  .nav__logo-white {
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+
+  .nav__button-home {
     font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nav__buttons {
+    gap: 40px;
+  }
+
+  .nav__button-home.active::after {
+    bottom: -18px;
+  }
+
+  .nav__saved__news-button-home {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nav__button-loggedin-white {
+    width: 100px;
+    height: 40px;
+  }
+
+  .nav__button-loggedin-black {
+    width: 100px;
+    height: 40px;
+  }
+
+  .nav__button-saved-articles-user {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nav__button-saved-articles {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .nav__button-saved-articles-user.active::after {
+    margin-top: -39px;
+  }
+
+  .nav__saved__news-username_white {
+    margin-right: 30px;
+  }
+
+  .nav__saved__news-username_black {
+    margin-right: 30px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    margin-right: -35px;
+  }
+
+  .nav__button-signin {
+    padding: 10px;
+    max-width: 145px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .nav {
-    padding: 23px 40px 18px 40px;
+    padding: 10px;
+    height: 56px;
   }
 
-  .nav__list {
+  .nav__logo-white {
+    margin-left: auto;
+  }
+
+  .nav__user-container {
     display: none;
   }
 
-  .nav__menu-btn {
-    display: block;
-    height: 24px;
+  .nav__menu-button {
+    display: flex;
+    background: url(../../assets/menu_white.svg) center no-repeat;
     width: 24px;
+    height: 24px;
     border: none;
-    background: transparent;
-    background-image: url("../../assets/menu-white.svg");
-  }
-
-  .nav__menu-btn--black {
-    background-image: url("../../assets/menu-black.svg");
-  }
-
-  .nav__menu-btn--black:hover {
     cursor: pointer;
+    margin-left: auto;
   }
 
-  .nav__menu-btn:hover {
+  .nav__button-home,
+  .nav__button-signin,
+  .nav__saved__news-button-home,
+  .nav__button-saved-articles-user,
+  .nav__button-saved-articles,
+  .nav__logout-black,
+  .nav__logout,
+  .nav__saved__news-username_black,
+  .nav__username-black,
+  .nav__username-white,
+  .nav__saved__news-username_white,
+  .nav__button-logout-white,
+  .nav__button-logout-black {
+    display: none;
+  }
+
+  .nav__saved-news-menu-button {
+    display: flex;
+    background: transparent url(../../assets/menu_black.svg) center
+      no-repeat;
+    width: 24px;
+    height: 24px;
+    border: none;
     cursor: pointer;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .nav {
-    padding: 16px 16px 0 16px;
+    margin-left: 20px;
   }
 }
