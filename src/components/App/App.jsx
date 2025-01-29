@@ -24,6 +24,7 @@ import { hasSearchedContext } from "../../contexts/hasSearchedContext";
 import { savedArticlesContext } from "../../contexts/savedArticlesContext";
 import { mobileContext } from "../../contexts/mobileContext";
 import { currentUserContext } from "../../contexts/currentUserContext";
+
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [keyword, setkeyword] = useState("");

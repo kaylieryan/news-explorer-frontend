@@ -17,7 +17,7 @@
   font-size: 60px;
   color: #fff;
   font-weight: 400;
-  font-family: "Roboto-Slab", Arial, sans-serif;
+  font-family: "Roboto-Slab-400", Arial, sans-serif;
   font-style: normal;
   font-size: 60px;
   line-height: 64px;
@@ -60,7 +60,7 @@
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto";
   line-height: 22px;
 }
 
