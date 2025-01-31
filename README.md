@@ -12,5 +12,8 @@ The idea of the project is to make a call to a public news API, which responds w
 - React Router
 - Node.js
 
-## Links
+## Link to the project
+
+[News Explorer](https://kaylieryan.github.io/news-explorer-frontend/)
+
 
