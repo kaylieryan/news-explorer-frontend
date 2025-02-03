@@ -1,4 +1,4 @@
-// import NotFoundImg from "../../assets/Not-Found-Img.svg";
+import NotFoundImg from "../../assets/not_found.svg";
 import "./NotFound.css";
 
 function NotFound() {
