@@ -60,7 +60,7 @@
 }
 
 .news__button-bookmark {
-  background: transparent url(../../assets/save_icon.svg);
+  background: transparent url("../../assets/save_icon.svg");
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -72,11 +72,11 @@
 }
 
 .news__button-bookmark:hover {
-  background: transparent url(../../assets/save_icon_hover.svg);
+  background: transparent url("../../assets/save_icon_hover.svg");
 }
 
 .news__button-bookmark_marked {
-  background: transparent url(../../assets/save_icon_marked.svg);
+  background: transparent url("../../assets/save_icon_marked.svg");
 }
 
 .news-card__link {
