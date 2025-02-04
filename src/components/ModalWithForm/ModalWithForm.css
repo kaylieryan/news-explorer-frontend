@@ -52,7 +52,7 @@
 .modal__title {
   margin: 0;
   padding: 0 0 22px;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: 900;
   font-size: 24px;
   font-style: normal;
@@ -79,7 +79,7 @@
   margin: 0 0 10px;
   margin-bottom: 10px;
   color: #2f71e5;
-  font-family: Inter;
+  font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 12px;
   font-style: normal;
