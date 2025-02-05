@@ -44,7 +44,7 @@
 }
 
 .news__button-delete {
-  background: url(../../assets/card_delete.svg);
+  background: url("../../assets/card_delete.svg");
   width: 40px;
   height: 40px;
   border-radius: 8px;

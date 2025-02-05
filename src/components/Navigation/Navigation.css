@@ -215,7 +215,7 @@
 
   .nav__menu-button {
     display: flex;
-    background: url(../../assets/menu_white.svg) center no-repeat;
+    background: url("../../assets/menu_white.svg") center no-repeat;
     width: 24px;
     height: 24px;
     border: none;
@@ -231,8 +231,7 @@
 
   .nav__saved-news-menu-button {
     display: flex;
-    background: transparent url(../../assets/menu_black.svg) center
-      no-repeat;
+    background: transparent url("../../assets/menu_black.svg") center no-repeat;
     width: 24px;
     height: 24px;
     border: none;
