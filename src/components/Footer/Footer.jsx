@@ -8,17 +8,17 @@ function Footer() {
       <p className="footer__copyright">
         &copy; {new Date().getFullYear()} Supersite, Powered by News API
       </p>
-      <nav className="footer__links-wrapper">
+      <div className="footer__links-wrapper">
         <ul className="footer__links">
           <li>
-            <a href="#" className="footer__link-home">
+            <a href="#" className="footer__link footer__link--home">
               Home
             </a>
           </li>
           <li>
             <a
               href="https://tripleten.com/"
-              className="footer__link-triplenTen">
+              className="footer__link footer__link--triplenTen">
               TriplenTen
             </a>
           </li>
@@ -27,7 +27,7 @@ function Footer() {
           <li>
             <a
               href="https://github.com/kaylieryan"
-              className="footer__link-github">
+              className="footer__link footer__link--github">
               <img
                 src={githubLogo}
                 alt="GitHub Logo"
@@ -38,7 +38,7 @@ function Footer() {
           <li>
             <a
               href="https://www.facebook.com/"
-              className="footer__link-facebook">
+              className="footer__link footer__link--facebook">
               <img
                 src={facebookLogo}
                 alt="Facebook Logo"
@@ -47,7 +47,7 @@ function Footer() {
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
     </footer>
   );
 }

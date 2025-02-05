@@ -45,18 +45,28 @@
   display: none;
 }
 
-.nav__button-home {
+.nav__link {
   border: none;
   background: none;
   cursor: pointer;
-  color: #ffffff;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   font-family: "Roboto", Arial, sans-serif;
   line-height: 24px;
   text-decoration: none;
-  position: relative;
+}
+
+.nav__link--home {
+  color: #ffffff;
+}
+
+.nav__link--saved {
+  color: #ffffff;
+}
+
+.nav__link--black {
+  color: black;
 }
 
 .nav__button-signin {
@@ -78,7 +88,7 @@
   line-height: 24px;
 }
 
-.nav__button-home.active::after {
+.nav__link--home.active::after {
   content: "";
   position: absolute;
   width: 60px;
@@ -86,65 +96,6 @@
   border-bottom: 3px solid #ffffff;
   left: -5px;
   bottom: -34px;
-}
-
-.nav__saved-news {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.nav__button-saved-articles {
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Roboto", Arial, sans-serif;
-  line-height: 24px;
-  text-decoration: none;
-}
-
-.nav__saved__news-button-home {
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: black;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  font-family: "Roboto", Arial, sans-serif;
-  line-height: 24px;
-  text-decoration: none;
-}
-
-.nav__button-saved-articles-user {
-  border: none;
-  background-color: transparent;
-  text-decoration: none;
-  cursor: pointer;
-  font-family: "Roboto", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  max-height: 80px;
-  width: 178px;
-}
-
-.nav__button-saved-articles-user.active::after {
-  content: "";
-  position: absolute;
-  width: 178px;
-  height: 2px;
-  border-bottom: 3px solid black;
-  margin-bottom: -89px;
 }
 
 .nav__button-loggedin {
@@ -210,7 +161,7 @@
     margin-top: 10px;
   }
 
-  .nav__button-home {
+  .nav__link {
     font-size: 16px;
     line-height: 20px;
   }
@@ -219,13 +170,8 @@
     gap: 40px;
   }
 
-  .nav__button-home.active::after {
+  .nav__link--home.active::after {
     bottom: -18px;
-  }
-
-  .nav__saved__news-button-home {
-    font-size: 16px;
-    line-height: 20px;
   }
 
   .nav__button-loggedin-white {
@@ -238,30 +184,9 @@
     height: 40px;
   }
 
-  .nav__button-saved-articles-user {
+  .nav__username {
     font-size: 16px;
     line-height: 20px;
-  }
-
-  .nav__button-saved-articles {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .nav__button-saved-articles-user.active::after {
-    margin-top: -39px;
-  }
-
-  .nav__saved__news-username_white {
-    margin-right: 30px;
-  }
-
-  .nav__saved__news-username_black {
-    margin-right: 30px;
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-    margin-right: -35px;
   }
 
   .nav__button-signin {
@@ -298,19 +223,9 @@
     margin-left: auto;
   }
 
-  .nav__button-home,
+  .nav__link,
   .nav__button-signin,
-  .nav__saved__news-button-home,
-  .nav__button-saved-articles-user,
-  .nav__button-saved-articles,
-  .nav__logout-black,
-  .nav__logout,
-  .nav__saved__news-username_black,
-  .nav__username-black,
-  .nav__username-white,
-  .nav__saved__news-username_white,
-  .nav__button-logout-white,
-  .nav__button-logout-black {
+  .nav__logout-icon {
     display: none;
   }
 

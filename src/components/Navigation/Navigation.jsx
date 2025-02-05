@@ -72,10 +72,10 @@ function Navigation({ onLoginClick, onLogout }) {
 
       {isLoggedIn && currentPage === "/" ? (
         <nav className="nav__user-container">
-          <NavLink to="/" className="nav__button-home">
+          <NavLink to="/" className="nav__link nav__link--home">
             Home
           </NavLink>
-          <NavLink to="/saved-news" className="nav__button-saved-articles">
+          <NavLink to="/saved-news" className="nav__link nav__link--saved">
             Saved Articles
           </NavLink>
           <button
@@ -93,10 +93,12 @@ function Navigation({ onLoginClick, onLogout }) {
         </nav>
       ) : isLoggedIn && currentPage === "/saved-news" ? (
         <nav className="nav__user-container">
-          <NavLink to="/" className="nav__saved__news-button-home">
+          <NavLink to="/" className="nav__link nav__link--home nav__link--black">
             Home
           </NavLink>
-          <NavLink to="/saved-news" className="nav__button-saved-articles-user">
+          <NavLink
+            to="/saved-news"
+            className="nav__link nav__link--saved nav__link--black">
             Saved Articles
           </NavLink>
           <button
@@ -115,7 +117,7 @@ function Navigation({ onLoginClick, onLogout }) {
       ) : (
         <div
           className={`nav__buttons ${mobileMenuOpen ? "nav__menu-open" : ""}`}>
-          <NavLink to="/" className="nav__button-home">
+          <NavLink to="/" className="nav__link nav__link--home">
             Home
           </NavLink>
           <button className="nav__button-signin" onClick={onLoginClick}>
