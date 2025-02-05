@@ -27,7 +27,7 @@ function SavedNewsHeader() {
   };
 
   return (
-    <nav className="saved__news">
+    <section className="saved__news">
       <h1 className="saved__news-title">Saved Articles</h1>
       <h2 className="saved__news-header">
         {currentUser.name}, you have {userArticles.length} saved articles
@@ -39,7 +39,7 @@ function SavedNewsHeader() {
           {getKeywordString(capitalizedFirstLetter)}
         </p>
       </div>
-    </nav>
+    </section>
   );
 }
 
