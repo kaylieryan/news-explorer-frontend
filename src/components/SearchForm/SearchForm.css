@@ -35,6 +35,11 @@
   line-height: 24px;
 }
 
+.search-form__bar {
+  display: flex;
+  width: 100%;
+  max-width: 563px;
+}
 .search-form__input {
   padding: 22px 21px;
   width: 563px;
@@ -95,6 +100,10 @@
     line-height: 20px;
   }
 
+  .search-form__bar {
+    max-width: 370px;
+  }
+
   .search-form__input {
     padding: 18px 15px;
     width: 370px;
@@ -131,6 +140,11 @@
     font-size: 25px;
     line-height: 24px;
     width: 375px;
+  }
+
+  .search-form__bar {
+    flex-direction: column;
+    align-items: center;
   }
 
   .search-form__input {
