@@ -32,9 +32,10 @@ function Main({
         handleSearch={handleSearch}
       />
       <main className="main">
-        {isLoggedIn && (
-        <div>
-          {hasSearched && searchResult.length > 0 ? (
+        <div className="main__content">
+          {isLoading ? (
+            <Preloader />
+          ) : hasSearched && searchResult.length > 0 ? (
             <NewsCardList
               onLoginClick={onLoginClick}
               handleSaveArticle={handleSaveArticle}
@@ -42,10 +43,8 @@ function Main({
             />
           ) : hasSearched && searchResult.length === 0 ? (
             <NotFound />
-          ) : isLoading ? (
-            <Preloader />
           ) : searchError === true ? (
-            <p>
+            <p className="main__error-message">
               Sorry, something went wrong during the request. There may be a
               connection issue or the server may be down. Please try again
               later.
@@ -54,7 +53,6 @@ function Main({
             ""
           )}
         </div>
-        )}
         <About />
       </main>
     </>

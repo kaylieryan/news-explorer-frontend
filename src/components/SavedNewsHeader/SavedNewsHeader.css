@@ -1,15 +1,15 @@
-.saved__news {
+.saved-news-header {
   padding: 40px 40px 56px;
   background-color: white;
 }
 
-.saved__news-container {
+.saved-news-header__container {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.saved__news-title {
+.saved-news-header__title {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -18,7 +18,7 @@
   color: rgba(26, 27, 34, 0.5);
 }
 
-.saved__news-header {
+.saved-news-header__subtitle {
   font-family: "Roboto-Slab", Arial, sans-serif;
   font-size: 40px;
   line-height: 46px;
@@ -27,7 +27,7 @@
   color: rgba(26, 27, 34, 1);
 }
 
-.saved__news-Keyword-container {
+.saved-news-header__keywords-container {
   display: flex;
   align-items: center;
   font-family: "Roboto", Arial, sans-serif;
@@ -38,38 +38,38 @@
   height: 24px;
 }
 
-.saved__news-Keywords-title {
+.saved-news-header__keywords-title {
   font-weight: 400;
 }
 
-.saved__news-Keywords {
+.saved-news-header__keywords {
   font-weight: 600;
   margin-left: 3px;
 }
 
 @media screen and (max-width: 768px) {
-  .saved__news {
+  .saved-news-header {
     padding: 24px;
   }
 
-  .saved__news-header {
+  .saved-news-header__subtitle {
     font-size: 30px;
     line-height: 34px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .saved__news {
+  .saved-news-header {
     padding: 20px 10px;
   }
 
-  .saved__news-title {
+  .saved-news-header__title {
     font-size: 16px;
     line-height: 20px;
     margin-top: 0;
   }
 
-  .saved__news-header {
+  .saved-news-header__subtitle {
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 52px;

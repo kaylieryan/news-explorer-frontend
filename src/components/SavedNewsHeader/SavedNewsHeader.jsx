@@ -27,15 +27,15 @@ function SavedNewsHeader() {
   };
 
   return (
-    <section className="saved__news">
-      <h1 className="saved__news-title">Saved Articles</h1>
-      <h2 className="saved__news-header">
+    <section className="saved-news-header">
+      <h1 className="saved-news-header__title">Saved Articles</h1>
+      <h2 className="saved-news-header__subtitle">
         {currentUser.name}, you have {userArticles.length} saved articles
         {userArticles.length === 1 ? "s" : ""}
       </h2>
-      <div className="saved__news-Keyword-container">
-        <p className="saved__news-Keywords-title">By Keywords:</p>
-        <p className="saved__news-Keywords">
+      <div className="saved-news-header__keywords-container">
+        <p className="saved-news-header__keywords-title">By Keywords:</p>
+        <p className="saved-news-header__keywords">
           {getKeywordString(capitalizedFirstLetter)}
         </p>
       </div>
