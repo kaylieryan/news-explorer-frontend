@@ -1,5 +1,6 @@
 .search-form {
   padding: 0 104px;
+  position: relative;
 }
 .search-form__container {
   display: flex;
