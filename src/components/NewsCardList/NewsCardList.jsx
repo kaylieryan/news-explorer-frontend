@@ -20,11 +20,11 @@ const NewsCardList = ({
   };
 
   return (
-    <div className="news__card-section">
+    <section className="news__card-section">
       {hasSearched ? (
         <>
-          <div className="news__cards-header">Search results</div>
-          <div className="news__cards-container">
+          <h2 className="news__cards-header">Search results</h2>
+          <ul className="news__cards-container">
             {searchResult.slice(0, cardsDisplayed).map((result, index) => (
               <li className="news__card-list" key={result.id || index}>
                 <NewsCard
@@ -35,7 +35,7 @@ const NewsCardList = ({
                 />
               </li>
             ))}
-          </div>
+          </ul>
           <button
             className={`news__cards-button ${
               cardsDisplayed >= searchResult.length ? "hidden" : ""
@@ -47,7 +47,7 @@ const NewsCardList = ({
       ) : (
         ""
       )}
-    </div>
+    </section>
   );
 };
 

@@ -13,11 +13,11 @@ const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
 
   return (
     <nav className="mobile">
-      <nav className="mobile__content">
-        <nav className="mobile__links">
-          <nav className="mobile__link-NewsExplorer" onClick={handleCloseMenu}>
+      <div className="mobile__content">
+        <div className="mobile__links">
+          <div className="mobile__link-NewsExplorer" onClick={handleCloseMenu}>
             NewsExplorer
-          </nav>
+          </div>
           <button
             className="mobile__link-NewsExplore-close"
             onClick={handleCloseMenu}></button>
@@ -47,8 +47,8 @@ const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
               Sign in
             </button>
           )}
-        </nav>
-      </nav>
+        </div>
+      </div>
     </nav>
   );
 };
