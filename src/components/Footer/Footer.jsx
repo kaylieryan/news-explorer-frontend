@@ -10,15 +10,15 @@ function Footer() {
       </p>
       <div className="footer__links-wrapper">
         <ul className="footer__links">
-          <li>
-            <a href="#" className="footer__link footer__link--home" target="_blank" rel="noopener noreferrer">
+          <li className="footer__item">
+            <a href="#" className="footer__link footer__link_type_home" target="_blank" rel="noopener noreferrer">
               Home
             </a>
           </li>
-          <li>
+          <li className="footer__item">
             <a
               href="https://tripleten.com/"
-              className="footer__link footer__link--triplenTen"
+              className="footer__link footer__link_type_triplenTen"
               target="_blank"
               rel="noopener noreferrer">
               TriplenTen
@@ -26,10 +26,10 @@ function Footer() {
           </li>
         </ul>
         <ul className="footer__social-links">
-          <li>
+          <li className="footer__social-item">
             <a
               href="https://github.com/kaylieryan"
-              className="footer__link footer__link--github"
+              className="footer__link footer__link_type_github"
               target="_blank"
               rel="noopener noreferrer">
               <img
@@ -39,10 +39,10 @@ function Footer() {
               />
             </a>
           </li>
-          <li>
+          <li className="footer__social-item">
             <a
               href="https://www.facebook.com/"
-              className="footer__link footer__link--facebook"
+              className="footer__link footer__link_type_facebook"
               target="_blank"
               rel="noopener noreferrer">
               <img
