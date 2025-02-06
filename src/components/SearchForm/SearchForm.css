@@ -37,6 +37,7 @@
 
 .search-form__bar {
   display: flex;
+  position: relative;
   width: 100%;
   max-width: 563px;
 }
