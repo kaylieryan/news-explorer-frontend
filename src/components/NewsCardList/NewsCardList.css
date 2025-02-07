@@ -1,5 +1,7 @@
 .news-card-list {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #f9f9f9;
   flex-wrap: wrap;
 }
@@ -23,6 +25,7 @@
   flex-wrap: wrap;
   gap: 16px;
   width: 100%;
+  padding: 0 16px; /* Adjust padding for smaller screens */
 }
 
 .news-card-list__item {
@@ -88,6 +91,10 @@
     font-size: 30px;
     line-height: 36px;
     margin-top: 10px;
+  }
+
+  .news-card-list__container {
+    padding: 0 8px; /* Adjust padding for smaller screens */
   }
 }
 
