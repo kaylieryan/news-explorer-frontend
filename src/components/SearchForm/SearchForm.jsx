@@ -15,8 +15,7 @@ function SearchForm({ handleSearch }) {
   };
 
   return (
-    <div className="search-form">
-      <section className="search-form__container">
+      <div className="search-form__container">
         <h1 className="search-form__header">What's going on in the world?</h1>
         <p className="search-form__subHeader">
           Find the latest news on any topic and save them in your personal
@@ -36,8 +35,8 @@ function SearchForm({ handleSearch }) {
             Search
           </button>
         </form>
-      </section>
-    </div>
+      </div>
+    
   );
 }
 
