@@ -46,6 +46,35 @@
   padding: 20px 0;
 }
 
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.header__header {
+  margin: 0;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Roboto-Slab-400", Arial, sans-serif;
+  font-style: normal;
+  line-height: 40px;
+}
+
+.header__subHeader {
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  padding: 32px 0 80px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     max-width: 768px;
@@ -55,11 +84,25 @@
   .header__logo {
     padding: 15px 30px;
     font-size: 18px;
-    margin-left: 300px;
   }
 
   .header__container {
     gap: 15px;
+  }
+
+  .header__content {
+    padding-top: 50px;
+  }
+
+  .header__header {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .header__subHeader {
+    padding: 20px 0 40px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
@@ -85,5 +128,65 @@
   .header__home-button {
     font-size: 14px;
     padding: 10px 0;
+  }
+
+  .header__content {
+    padding-top: 70px;
+  }
+
+  .header__header {
+    font-size: 48px;
+    line-height: 40px;
+  }
+
+  .header__subHeader {
+    font-size: 25px;
+    line-height: 24px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    width: 320px;
+    height: 536px;
+  }
+
+  .header__logo {
+    width: 320px;
+    height: 56px;
+    padding: 16px;
+    margin: 0;
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+    background: rgba(196, 196, 196, 0.01);
+  }
+
+  .header__title {
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  .header__container {
+    display: none; /* Hide navigation items */
+  }
+
+  .header__content {
+    padding-top: 86px;
+  }
+
+  .header__header {
+    font-size: 36px;
+    line-height: 40px;
+    margin-left: 19px;
+  }
+
+  .header__subHeader {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 0 122px;
+    margin-left: 16px;
   }
 }
