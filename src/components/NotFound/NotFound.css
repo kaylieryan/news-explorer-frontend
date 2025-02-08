@@ -4,6 +4,8 @@
   align-items: center;
   background-color: #f5f6f7;
   padding: 250px 0 86px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .not-found__img {
@@ -34,12 +36,14 @@
 
 @media screen and (max-width: 768px) {
   .not-found {
-    width: 768px;
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 400px) {
   .not-found {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
