@@ -15,29 +15,20 @@ function SearchForm({ handleSearch }) {
   };
 
   return (
-    <div className="search-form">
-      <section className="search-form__container">
-        <h1 className="search-form__header">What's going on in the world?</h1>
-        <p className="search-form__subHeader">
-          Find the latest news on any topic and save them in your personal
-          account.
-        </p>
-        <form className="search-form__bar" onSubmit={handleSubmit}>
-          <input
-            className="search-form__input"
-            type="text"
-            id="search"
-            value={keyword}
-            placeholder="Enter Topic"
-            onChange={handleKeyWord}
-            required
-          />
-          <button type="submit" className="search-form__button">
-            Search
-          </button>
-        </form>
-      </section>
-    </div>
+    <form className="search-form__bar" onSubmit={handleSubmit}>
+      <input
+        className="search-form__input"
+        type="text"
+        id="search"
+        value={keyword}
+        placeholder="Enter Topic"
+        onChange={handleKeyWord}
+        required
+      />
+      <button type="submit" className="search-form__button">
+        Search
+      </button>
+    </form>
   );
 }
 
