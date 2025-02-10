@@ -238,23 +238,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    setIsLoading(true);
-    getSavedArticles()
-      .then((res) => {
-        setSearchResult(res);
-        setHasSearched(true);
-        setSearchError(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setSearchError(true);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
-
   return (
     <div className="page">
       <currentPageContext.Provider value={{ currentPage, setCurrentPage }}>

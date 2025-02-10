@@ -12,7 +12,6 @@ const NewsCardList = ({
   const [cardsDisplayed, setCardsDisplayed] = useState(3);
 
   const { searchResult } = useContext(searchResultContext);
-
   const { hasSearched } = useContext(hasSearchedContext);
 
   const increaseVisibleCards = () => {
@@ -21,7 +20,7 @@ const NewsCardList = ({
 
   return (
     <section className="news-card-list">
-      {hasSearched ? (
+      {hasSearched && searchResult.length > 0 && (
         <>
           <h2 className="news-card-list__header">Search results</h2>
           <ul className="news-card-list__container">
@@ -38,14 +37,14 @@ const NewsCardList = ({
           </ul>
           <button
             className={`news-card-list__button ${
-              cardsDisplayed >= searchResult.length ? "news-card-list__button_hidden" : ""
+              cardsDisplayed >= searchResult.length
+                ? "news-card-list__button_hidden"
+                : ""
             }`}
             onClick={increaseVisibleCards}>
             Show more
           </button>
         </>
-      ) : (
-        ""
       )}
     </section>
   );
