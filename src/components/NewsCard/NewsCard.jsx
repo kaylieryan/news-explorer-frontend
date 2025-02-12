@@ -52,7 +52,6 @@ function NewsCard({
       {currentPage === "/saved-news" && (
         <>
           <h2 className="news__keyword">{newsData.keyword}</h2>
-
           <div
             className={`news__popup-text ${
               isHovered ? "" : "news__popup-text_hidden"
@@ -72,19 +71,35 @@ function NewsCard({
         </>
       )}
 
-      {isLoggedIn && currentPage === "/" ? (
-        <button
-          className={`news__button-bookmark ${
-            savedArticles.some(
+      {isLoggedIn && currentPage === "/" && (
+        <>
+          <div
+            className={`news__popup-text ${
+              isHovered ? "" : "news__popup-text_hidden"
+            }`}>
+            {savedArticles.some(
               (savedArticles) => savedArticles.link === newsData.url
             )
-              ? "news__button-bookmark_marked"
-              : ""
-          }`}
-          onClick={newsData.isSaved ? handleRemoveClick : handleBookmarkClick}
-        />
-      ) : (
-        ""
+              ? "Remove from saved"
+              : "Save article"}
+          </div>
+          <button
+            className={`news__button-bookmark ${
+              savedArticles.some(
+                (savedArticles) => savedArticles.link === newsData.url
+              )
+                ? "news__button-bookmark_marked"
+                : ""
+            }`}
+            onClick={newsData.isSaved ? handleRemoveClick : handleBookmarkClick}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          />
+        </>
       )}
       {!isLoggedIn && (
         <>
@@ -94,7 +109,6 @@ function NewsCard({
             }`}>
             Sign in to save articles
           </div>
-
           <button
             className="news__button-bookmark"
             onClick={onClick}
