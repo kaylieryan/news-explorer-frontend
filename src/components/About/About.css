@@ -1,101 +1,144 @@
 .about {
-  background-color: #fff;
   display: flex;
-  justify-content: center;
-  gap: 56px;
-  padding: 80px 216px 80px 104px;
   align-items: center;
+  justify-content: baseline;
+  padding: 0;
+  position: relative;
+  background-color: white;
 }
 
 .about__image-container {
-  height: 464px;
-  width: 464px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about__image {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+  max-width: auto;
+  max-height: auto;
+  width: 464px;
+  height: 464px;
+  margin: 80px 56px 80px 104px;
+  background-repeat: no-repeat;
+  background-size: cover;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .about__info {
+  flex-wrap: wrap;
   max-width: 600px;
-  text-align: center;
-  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
 .about__title {
-  font-family: "Roboto-Slab-400", Arial, sans-serif;
   font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 24px;
   font-weight: 400;
-  line-height: 46px;
-  text-align: left;
-  margin-top: 42px;
-  margin-bottom: 0;
-  padding: 0;
-  white-space: nowrap; /* Ensure the title does not wrap */
+  font-family: "Roboto-Slab-400", Arial, Helvetica, sans-serif;
 }
 
 .about__paragraph {
-  font-family: "Roboto", Arial, sans-serif;
-  padding-top: 10px;
   font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #1a1b22;
   font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  max-width: 600px;
-  margin-top: 15px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 842px) {
   .about {
-    padding: 80px 104px;
+    flex-direction: row; /* Maintain row direction to keep image and text side-by-side */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add some padding for spacing */
+    max-width: 768px;
   }
 
-  .about__content {
-    height: 232px;
-    width: 232px;
-  }
-
-  .about__paragraph {
-    max-width: 424px;
-  }
-}
-
-@media screen and (max-width: 850px) {
   .about__image-container {
-    height: 232px;
-    width: 232px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Add space between the image and text */
   }
 
-  .about {
-    padding: 40px;
+  .about__image {
+    max-width: 232px; /* Constrain the max width to avoid it becoming too large */
+    height: 232px; /* Maintain aspect ratio */
+    margin: 0; /* Reset margins to keep the layout compact */
+    object-fit: cover; /* Ensure the image covers its container nicely */
+    margin: 0;
   }
 
-  .about__paragraph {
-    max-width: 424px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .about {
-    flex-direction: column;
-    gap: 24px;
-    padding: 32px 24px;
+  .about__info {
+    max-width: 420px; /* Allow it to use the remaining space */
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Add padding to keep it readable */
+    font-size: 18px;
   }
 
   .about__title {
-    margin: 0;
-    font-size: 30px; /* Adjust font size to fit within the available space */
-  }
-
-  .about__image-container {
-    height: 272px;
-    width: 272px;
+    font-size: 30px; /* Scale down the title slightly for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for consistency */
+    margin-top: 40px;
   }
 
   .about__paragraph {
-    max-width: 272px;
+    font-size: 18px; /* Adjust font size for readability */
+    line-height: 1.5; /* Maintain a comfortable line height */
+  }
+}
+
+@media screen and (max-width: 768) {
+  .about {
+    flex-direction: row; /* Maintain row direction to keep image and text side-by-side */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Add some padding for spacing */
+    max-width: 768px;
+  }
+
+  .about__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Add space between the image and text */
+  }
+
+  .about__image {
+    max-width: 232px; /* Constrain the max width to avoid it becoming too large */
+    height: 232px; /* Maintain aspect ratio */
+    margin: 0; /* Reset margins to keep the layout compact */
+    object-fit: cover; /* Ensure the image covers its container nicely */
+    margin: 0;
+  }
+
+  .about__info {
+    max-width: 420px; /* Allow it to use the remaining space */
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    padding: 10px; /* Add padding to keep it readable */
+    font-size: 18px;
+  }
+
+  .about__title {
+    font-size: 30px; /* Scale down the title slightly for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for consistency */
+    margin-top: 40px;
+  }
+
+  .about__paragraph {
+    font-size: 18px; /* Adjust font size for readability */
+    line-height: 1.5; /* Maintain a comfortable line height */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    flex-wrap: wrap;
   }
 }
