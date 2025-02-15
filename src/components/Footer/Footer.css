@@ -25,15 +25,11 @@
   gap: 20px;
 }
 
-.footer__content {
-  display: flex;
-  gap: 20px;
-}
-
 .footer__links {
   display: flex;
   list-style: none;
   padding: 0;
+  gap: 20px;
 }
 
 .footer__link {
@@ -48,7 +44,7 @@
   text-decoration: none;
 }
 
-.footer__link--home {
+.footer__link-home {
   margin-right: 30px;
 }
 
@@ -62,7 +58,7 @@
   padding: 0;
 }
 
-.footer__link--github {
+.footer__link-github {
   padding: 0 24px;
 }
 
@@ -87,7 +83,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   .footer {
     height: auto;
     flex-direction: column;
@@ -100,16 +96,12 @@
     order: 2;
     font-size: 20px;
     line-height: 18px;
-  }
-
-  .footer__content {
     margin-right: 20px;
   }
 
   .footer__links-wrapper {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    gap: 10px;
   }
 
   .footer__links {
@@ -125,7 +117,11 @@
     margin-left: 10px;
   }
 
-  .footer__link--triplenTen {
+  .footer__link-triplenTen {
     margin-top: 10px;
+  }
+
+  .footer__link-github {
+    padding: 0;
   }
 }
