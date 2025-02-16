@@ -7,7 +7,7 @@
   max-width: 1320px;
   margin: 0 auto;
   gap: 46px;
-  /* padding: 60px; */
+  padding: 60px;
 }
 
 .footer__copyright {
@@ -86,8 +86,8 @@
 
 @media screen and (max-width: 633px) {
   .footer__copyright {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 22px;
     text-align: center;
     /* white-space: nowrap; Ensure the text does not wrap */
   }
