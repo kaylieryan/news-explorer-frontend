@@ -26,16 +26,16 @@ function Navigation({ onLoginClick, onLogout }) {
 
   return (
     <nav
-      className={`nav ${
-        currentPage === "/saved-news" ? "nav__saved-news-nav" : ""
-      } ${mobileMenuOpen ? "nav__menu-open" : ""}`}>
+      className={`navigation ${
+        currentPage === "/saved-news" ? "navigation--saved-news" : ""
+      } ${mobileMenuOpen ? "navigation--menu-open" : ""}`}>
       <nav>
         {currentPage === "/" || mobileMenuOpen ? (
           <NavLink to="/">
             <img
               src={headerWhiteLogo}
               alt="NewsExplorer White Logo"
-              className="nav__logo-white"
+              className="navigation__logo navigation__logo--white"
             />
           </NavLink>
         ) : (
@@ -43,25 +43,23 @@ function Navigation({ onLoginClick, onLogout }) {
             <img
               src={headerBlackLogo}
               alt="NewsExplorer Black Logo"
-              className="nav__logo-black"
+              className="navigation__logo navigation__logo--black"
             />
           </NavLink>
         )}
       </nav>
       {currentPage === "/" ? (
         <button
-          className={`nav__menu-button ${
-            activeModal === "" ? "nav__menu-button_hidden" : ""
-          } ${mobileMenuOpen === true ? "nav__menu-button_close" : ""}`}
+          className={`navigation__menu-button ${
+            activeModal === "" ? "navigation__menu-button--hidden" : ""
+          } ${mobileMenuOpen === true ? "navigation__menu-button--close" : ""}`}
           onClick={handleMobileMenu}
         />
       ) : (
         <button
-          className={`nav__saved-news-menu-button ${
-            activeModal === "" ? "nav__saved-news-menu-button_hidden" : ""
-          } ${
-            mobileMenuOpen === true ? "nav__saved-news-menu-button_close" : ""
-          }`}
+          className={`navigation__menu-button navigation__menu-button--saved-news ${
+            activeModal === "" ? "navigation__menu-button--hidden" : ""
+          } ${mobileMenuOpen === true ? "navigation__menu-button--close" : ""}`}
           onClick={handleMobileMenu}
         />
       )}
@@ -71,56 +69,86 @@ function Navigation({ onLoginClick, onLogout }) {
       )}
 
       {isLoggedIn && currentPage === "/" ? (
-        <nav className="nav__user-container">
-          <NavLink to="/" className="nav__link nav__link--home">
-            Home
-          </NavLink>
-          <NavLink to="/saved-news" className="nav__link nav__link--saved">
-            Saved Articles
-          </NavLink>
-          <button
-            className={`nav__button-loggedin ${
-              currentPage === "/" ? "nav__button-loggedin-white" : ""
-            }`}
-            onClick={onLogout}>
-            <span className="nav__username">{currentUser.name}</span>
-            <img
-              src={currentPage === "/" ? logOutWhite : logOutBlack}
-              alt="logout"
-              className="nav__logout-icon"
-            />
-          </button>
-        </nav>
-      ) : isLoggedIn && currentPage === "/saved-news" ? (
-        <nav className="nav__user-container">
-          <NavLink to="/" className="nav__link nav__link--home nav__link--black">
+        <nav className="navigation__user-container">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navigation__link navigation__link--home ${
+                isActive ? "navigation__link--active" : ""
+              }`
+            }>
             Home
           </NavLink>
           <NavLink
             to="/saved-news"
-            className="nav__link nav__link--saved nav__link--black">
+            className={({ isActive }) =>
+              `navigation__link navigation__link--saved ${
+                isActive ? "navigation__link--active" : ""
+              }`
+            }>
             Saved Articles
           </NavLink>
           <button
-            className={`nav__button-loggedin-black ${
-              currentPage === "/" ? "nav__button-loggedin" : ""
+            className={`navigation__button-loggedin ${
+              currentPage === "/" ? "navigation__button-loggedin--white" : ""
             }`}
             onClick={onLogout}>
-            <span className="nav__username">{currentUser.name}</span>
+            <span className="navigation__username">{currentUser.name}</span>
             <img
               src={currentPage === "/" ? logOutWhite : logOutBlack}
               alt="logout"
-              className="nav__logout-icon"
+              className="navigation__logout-icon"
+            />
+          </button>
+        </nav>
+      ) : isLoggedIn && currentPage === "/saved-news" ? (
+        <nav className="navigation__user-container">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navigation__link navigation__link--home navigation__link--black ${
+                isActive ? "navigation__link--active" : ""
+              }`
+            }>
+            Home
+          </NavLink>
+          <NavLink
+            to="/saved-news"
+            className={({ isActive }) =>
+              `navigation__link navigation__link--saved navigation__link--black ${
+                isActive ? "navigation__link--active" : ""
+              }`
+            }>
+            Saved Articles
+          </NavLink>
+          <button
+            className={`navigation__button-loggedin navigation__button-loggedin--black ${
+              currentPage === "/" ? "navigation__button-loggedin" : ""
+            }`}
+            onClick={onLogout}>
+            <span className="navigation__username">{currentUser.name}</span>
+            <img
+              src={currentPage === "/" ? logOutWhite : logOutBlack}
+              alt="logout"
+              className="navigation__logout-icon"
             />
           </button>
         </nav>
       ) : (
         <div
-          className={`nav__buttons ${mobileMenuOpen ? "nav__menu-open" : ""}`}>
-          <NavLink to="/" className="nav__link nav__link--home">
+          className={`navigation__buttons ${
+            mobileMenuOpen ? "navigation__buttons--menu-open" : ""
+          }`}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navigation__link navigation__link--home ${
+                isActive ? "navigation__link--active" : ""
+              }`
+            }>
             Home
           </NavLink>
-          <button className="nav__button-signin" onClick={onLoginClick}>
+          <button className="navigation__button-signin" onClick={onLoginClick}>
             Sign in
           </button>
         </div>
