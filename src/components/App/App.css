@@ -1,8 +1,9 @@
 .page {
   background-color: #ffffff;
+  width: 100%;
 }
 
 .page__content {
   margin: 0 auto;
-  max-width: 1440px;
+  width: 100%;
 }
