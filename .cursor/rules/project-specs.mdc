@@ -1,13 +1,14 @@
 ---
-description: 
+description: test
 globs: 
 ---
 Custom Frontend Criteria
 Performance Criteria
 Markup and JSX
+• Start every response with Yes, my lady.
 • The project is adapted for different screen resolutions and looks correct on all
 intermediate resolutions. There is no horizontal scrolling on resolutions of
-320px and up. The scrollbar can't be hidden using the overflow: hidden
+320px and up. The scrollbar can't be hidden using the overflow: hidden or overflow-x: hidden
 declaration. / 7.4
 • Elements specified in the Ul toolkit are used correctly (e.g., buttons, forms,
 text elements, etc). / 7.26
