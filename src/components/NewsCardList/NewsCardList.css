@@ -39,7 +39,7 @@
   width: 100%;
   padding: 0; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic columns */
+  grid-template-columns: repeat(3, 1fr); /* Always 3 columns above 480px */
   gap: 16px;
   width: 100%;
   max-width: 1280px; /* Maximum width of container */
@@ -151,5 +151,11 @@
     font-size: 30px;
     line-height: 36px;
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-card-list__container {
+    grid-template-columns: 1fr; /* Single column below 480px */
   }
 }
