@@ -3,8 +3,10 @@
   background: #f9f9f9;
   flex-wrap: wrap; */
   background-color: #f5f6f7;
-  padding-bottom: 80px;
+  padding: 80px 40px; /* Reduced side padding */
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .news-card-list__header {
@@ -35,14 +37,14 @@
   gap: 16px;
   width: 100%;
   padding: 0; */
-  margin: 0 auto; /* Center the list container */
-  display: flex;
-  justify-content: center; /* Center cards horizontally */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
-  gap: 16px; /* Space between cards */
-  list-style-type: none;
-  padding: 0; /* Remove left padding */
-  margin-top: 64px; /* Keep top margin */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Dynamic columns */
+  gap: 16px;
+  width: 100%;
+  max-width: 1280px; /* Maximum width of container */
+  margin: 0 auto;
+  padding: 0;
+  justify-items: center; /* Center cards in their grid cells */
 }
 
 .news-card-list__item {
@@ -92,11 +94,11 @@
 
 @media screen and (max-width: 768px) {
   .news-card-list {
-    max-width: 100%;
+    padding: 40px 20px;
   }
 
   .news-card-list__container {
-    margin-top: 0;
+    gap: 12px;
   }
 
   .news-card-list__header {
@@ -120,12 +122,18 @@
 }
 
 @media screen and (max-width: 600px) {
+  .news-card-list {
+    padding: 24px 16px;
+  }
+
+  .news-card-list__container {
+    gap: 10px;
+  }
+
   .news-card-list__header {
-    height: 34px;
-    font-size: 30px;
-    line-height: 36px;
-    margin-top: 10px;
-    margin-left: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 20px 0;
   }
 
   .news-card-list__button {
