@@ -3,9 +3,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
 }
 .header__nav-container {
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 }
 
 .header__logo-container {
@@ -17,6 +18,7 @@
   max-width: 608px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 48px;
 }
 
 .header__title {
@@ -26,7 +28,7 @@
   line-height: 64px;
   color: #fff;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .header__subtitle {
