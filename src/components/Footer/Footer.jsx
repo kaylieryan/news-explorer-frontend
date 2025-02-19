@@ -5,56 +5,45 @@ import facebookLogo from "../../assets/facebook.svg";
 function Footer() {
   return (
     <footer className="footer">
-      <p className="footer__copyright">© Supersite, Powered by News API</p>
-      <div className="footer__links-wrapper">
-        <ul className="footer__links">
-          <li className="footer__item">
-            <a
-              href="#"
-              className="footer__link footer__link-home"
-              target="_blank"
-              rel="noopener noreferrer">
-              Home
-            </a>
-          </li>
-          <li className="footer__item">
-            <a
-              href="https://tripleten.com/"
-              className="footer__link footer__link-triplenTen"
-              target="_blank"
-              rel="noopener noreferrer">
-              TriplenTen
-            </a>
-          </li>
-        </ul>
-        <ul className="footer__social-links">
-          <li className="footer__social-item">
-            <a
-              href="https://github.com/kaylieryan"
-              className="footer__link footer__link-github"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                src={githubLogo}
-                alt="GitHub Logo"
-                className="footer__link-icon"
-              />
-            </a>
-          </li>
-          <li className="footer__social-item">
-            <a
-              href="https://www.facebook.com/"
-              className="footer__link footer__link-facebook"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img
-                src={facebookLogo}
-                alt="Facebook Logo"
-                className="footer__link-icon"
-              />
-            </a>
-          </li>
-        </ul>
+      <p className="footer__text">© Supersite, Powered by News API</p>
+      <div className="footer__social">
+        <nav className="footer__nav">
+          <a href="/" className="footer__link">
+            Home
+          </a>
+
+          <a
+            href="https://tripleten.com/"
+            className="footer__link"
+            target="_blank"
+            rel="noopener noreferrer">
+            TriplenTen
+          </a>
+        </nav>
+
+        <div className="footer__media">
+          <a
+            href="https://github.com/kaylieryan"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              src={githubLogo}
+              alt="GitHub Logo"
+              className="footer__github-icon"
+            />
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              src={facebookLogo}
+              alt="Facebook Logo"
+              className="footer__fb-icon"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
