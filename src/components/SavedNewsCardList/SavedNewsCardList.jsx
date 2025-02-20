@@ -12,10 +12,10 @@ function SavedNewsCardList({ handleRemoveArticle, handleSaveArticle }) {
       <div className="saved__news-cards-container">
         {savedArticles
           .filter((article) => article.owner === currentUser._id)
-          .map((article) => (
+          .map((article, index) => (
             <NewsCard
               newsData={article}
-              key={article._id}
+              key={`${article._id}-${index}`}
               handleRemoveArticle={handleRemoveArticle}
               handleSaveArticle={handleSaveArticle}
             />
