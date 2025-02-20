@@ -43,17 +43,19 @@
 
 .news-card__popup-text {
   background-color: white;
-  padding: 8px 22px;
+  padding: 8px 0;
   border-radius: 8px;
-  text-align: center;
   position: absolute;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.7;
   text-align: center;
-  margin-left: 150px;
-  margin-top: 24px;
+  width: 182px;
+  height: 40px;
+  box-sizing: border-box;
+  right: 69px;
+  top: 24px;
 }
 
 .news-card__popup-text_hidden {
@@ -209,6 +211,10 @@
   .news-card__source {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .news-card__popup-text {
+    top: 10px;
   }
 }
 
