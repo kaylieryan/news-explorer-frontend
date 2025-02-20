@@ -1,14 +1,4 @@
 .news-card {
-  /* display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: white;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  margin: 0 auto; */
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -23,11 +13,20 @@
   box-sizing: border-box;
 }
 
-.news-card__image-container {
-  height: 272px;
+.news-card__controls {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
-.news__keyword {
+.news-card__button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.news-card__keyword {
   background-color: white;
   padding: 8px 22px;
   text-align: center;
@@ -42,7 +41,7 @@
   left: 24px;
 }
 
-.news__popup-text {
+.news-card__popup-text {
   background-color: white;
   padding: 8px 22px;
   border-radius: 8px;
@@ -57,11 +56,11 @@
   margin-top: 24px;
 }
 
-.news__popup-text_hidden {
+.news-card__popup-text_hidden {
   display: none;
 }
 
-.news__button-delete {
+.news-card__button-delete {
   background: url("../../assets/card_delete.svg") center no-repeat;
   background-color: white;
   width: 40px;
@@ -74,13 +73,13 @@
   cursor: pointer;
 }
 
-.news__button-delete:hover {
+.news-card__button-delete:hover {
   background: url("../../assets/card_delete_hover.svg") center no-repeat;
   background-color: white;
   cursor: pointer;
 }
 
-.news__button-bookmark {
+.news-card__button-bookmark {
   background: transparent url("../../assets/save_icon.svg");
   width: 40px;
   height: 40px;
@@ -92,12 +91,16 @@
   cursor: pointer;
 }
 
-.news__button-bookmark:hover {
+.news-card__button-bookmark:hover {
   background: transparent url("../../assets/save_icon_hover.svg");
 }
 
-.news__button-bookmark_marked {
+.news-card__button-bookmark_marked {
   background: transparent url("../../assets/save_icon_marked.svg");
+}
+
+.news-card__content {
+  width: 100%;
 }
 
 .news-card__link {
@@ -172,17 +175,17 @@
     height: 196px;
   }
 
-  .news__keyword {
+  .news-card__keyword {
     left: 10px;
     top: 0;
   }
 
-  .news__button-delete {
+  .news-card__button-delete {
     top: 10px;
     right: 10px;
   }
 
-  .news__button-bookmark {
+  .news-card__button-bookmark {
     margin-left: 165px;
     margin-top: 10px;
   }
@@ -218,11 +221,11 @@
     height: 168px;
   }
 
-  .news__keyword {
+  .news-card__keyword {
     left: 10px;
   }
 
-  .news__button-bookmark {
+  .news-card__button-bookmark {
     margin-left: calc(100% - 50px);
   }
 
