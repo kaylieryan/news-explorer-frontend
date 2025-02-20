@@ -49,105 +49,104 @@ function NewsCard({
 
   return (
     <section className="news-card">
-      {currentPage === "/saved-news" && (
-        <>
-          <h2 className="news__keyword">{newsData.keyword}</h2>
-          <div
-            className={`news__popup-text ${
-              isHovered ? "" : "news__popup-text_hidden"
-            }`}>
-            Remove from saved
-          </div>
-          <button
-            className="news__button-delete"
-            onClick={handleRemoveClick}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          />
-        </>
-      )}
-
-      {isLoggedIn && currentPage === "/" && (
-        <>
-          <div
-            className={`news__popup-text ${
-              isHovered ? "" : "news__popup-text_hidden"
-            }`}>
-            {savedArticles.some(
-              (savedArticles) => savedArticles.link === newsData.url
-            )
-              ? "Remove from saved"
-              : "Save article"}
-          </div>
-          <button
-            className={`news__button-bookmark ${
-              savedArticles.some(
-                (savedArticles) => savedArticles.link === newsData.url
-              )
-                ? "news__button-bookmark_marked"
-                : ""
-            }`}
-            onClick={newsData.isSaved ? handleRemoveClick : handleBookmarkClick}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          />
-        </>
-      )}
-      {!isLoggedIn && (
-        <>
-          <div
-            className={`news__popup-text ${
-              isHovered ? "" : "news__popup-text_hidden"
-            }`}>
-            Sign in to save articles
-          </div>
-          <button
-            className="news__button-bookmark"
-            onClick={onClick}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          />
-        </>
-      )}
-
-      <a
-        className="news-card__link"
-        href={newsData.url}
-        target="_blank"
-        rel="noreferrer">
-        {newsData.urlToImage && (
-          <img
-            className="news-card__image"
-            src={newsData.urlToImage}
-            alt={newsData.title}
-          />
+      {/* Controls container */}
+      <div className="news-card__controls">
+        {currentPage === "/saved-news" && (
+          <>
+            <h2 className="news-card__keyword">{newsData.keyword}</h2>
+            <div className="news-card__button-container">
+              <div
+                className={`news-card__popup-text ${
+                  isHovered ? "" : "news-card__popup-text_hidden"
+                }`}>
+                Remove from saved
+              </div>
+              <button
+                className="news-card__button-delete"
+                onClick={handleRemoveClick}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              />
+            </div>
+          </>
         )}
 
-        <header className="news-card__text">
-          <p className="news-card__date">{formattedDate}</p>
-          <h3 className="news-card__title">{newsData.title}</h3>
-          <p className="news-card__description">
-            {newsData.text || newsData.description}
-          </p>
-          {newsData.source && (
-            <p className="news-card__source">
-              {newsData.source.name || newsData.source}
-            </p>
+        {isLoggedIn && currentPage === "/" && (
+          <div className="news-card__button-container">
+            <div
+              className={`news-card__popup-text ${
+                isHovered ? "" : "news-card__popup-text_hidden"
+              }`}>
+              {savedArticles.some(
+                (savedArticles) => savedArticles.link === newsData.url
+              )
+                ? "Remove from saved"
+                : "Save article"}
+            </div>
+            <button
+              className={`news-card__button-bookmark ${
+                savedArticles.some(
+                  (savedArticles) => savedArticles.link === newsData.url
+                )
+                  ? "news-card__button-bookmark_marked"
+                  : ""
+              }`}
+              onClick={
+                newsData.isSaved ? handleRemoveClick : handleBookmarkClick
+              }
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            />
+          </div>
+        )}
+
+        {!isLoggedIn && (
+          <div className="news-card__button-container">
+            <div
+              className={`news-card__popup-text ${
+                isHovered ? "" : "news-card__popup-text_hidden"
+              }`}>
+              Sign in to save articles
+            </div>
+            <button
+              className="news-card__button-bookmark"
+              onClick={onClick}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            />
+          </div>
+        )}
+      </div>
+
+      {/* Content container */}
+      <div className="news-card__content">
+        <a
+          className="news-card__link"
+          href={newsData.url}
+          target="_blank"
+          rel="noreferrer">
+          {newsData.urlToImage && (
+            <img
+              className="news-card__image"
+              src={newsData.urlToImage}
+              alt={newsData.title}
+            />
           )}
-        </header>
-      </a>
+
+          <header className="news-card__text">
+            <p className="news-card__date">{formattedDate}</p>
+            <h3 className="news-card__title">{newsData.title}</h3>
+            <p className="news-card__description">
+              {newsData.text || newsData.description}
+            </p>
+            {newsData.source && (
+              <p className="news-card__source">
+                {newsData.source.name || newsData.source}
+              </p>
+            )}
+          </header>
+        </a>
+      </div>
     </section>
   );
 }
