@@ -62,7 +62,8 @@
 }
 
 .news__button-delete {
-  background: url("../../assets/card_delete.svg");
+  background: url("../../assets/card_delete.svg") center no-repeat;
+  background-color: white;
   width: 40px;
   height: 40px;
   border-radius: 8px;
@@ -74,6 +75,8 @@
 }
 
 .news__button-delete:hover {
+  background: url("../../assets/card_delete_hover.svg") center no-repeat;
+  background-color: white;
   cursor: pointer;
 }
 
