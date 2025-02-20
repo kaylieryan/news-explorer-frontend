@@ -45,6 +45,7 @@
 }
 
 .saved-news-header__keywords {
+  font-family: "Roboto-700", Arial, sans-serif;
   font-weight: 700;
   margin-left: 3px;
 }
