@@ -147,15 +147,6 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-  .news-card-list__header {
-    height: 34px;
-    font-size: 30px;
-    line-height: 36px;
-    margin-top: 10px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .news-card-list {
     padding: 24px 16px;
@@ -166,3 +157,14 @@
     gap: 10px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .news-card-list__header {
+    height: 34px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 10px;
+  }
+}
+
+
