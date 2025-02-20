@@ -34,7 +34,7 @@ function SavedNewsHeader() {
         {userArticles.length === 1 ? "s" : ""}
       </h2>
       <div className="saved-news-header__keywords-container">
-        <p className="saved-news-header__keywords-title">By Keywords:</p>
+        <p className="saved-news-header__keywords-title">By keywords:</p>
         <p className="saved-news-header__keywords">
           {getKeywordString(capitalizedFirstLetter)}
         </p>
