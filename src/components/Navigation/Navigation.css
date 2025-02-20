@@ -2,9 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 104px 26px;
+  padding: 16px 104px;
   border-bottom: 1px solid rgba(246, 244, 244, 0.7);
   color: #fff;
+  height: 80px;
+  box-sizing: border-box;
 }
 
 .navigation--saved-news {
@@ -79,7 +81,25 @@
 }
 
 .navigation__link--active {
-  text-decoration: underline; /* Underline the active link */
+  position: relative;
+}
+
+.navigation__link--active::after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  bottom: -29px;
+  width: 68px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.navigation__link--saved.navigation__link--active::after {
+  width: 155px;  /* Wider to accommodate "Saved Articles" text */
+}
+
+.navigation__link--active.navigation__link--black::after {
+  background-color: #000;
 }
 
 .navigation__button-signin {
@@ -147,6 +167,20 @@
   height: 24px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navigation {
+    padding: 30px 40px 26px;
+  }
+
+  .navigation__user-container {
+    gap: 30px;
+  }
+
+  .navigation__buttons {
+    gap: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
