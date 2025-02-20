@@ -99,7 +99,8 @@
   }
 
   .news-card-list__container {
-    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Back to 3 columns */
+    gap: 8px; /* Reduce gap slightly to give cards more room */
   }
 
   .news-card-list__header {
