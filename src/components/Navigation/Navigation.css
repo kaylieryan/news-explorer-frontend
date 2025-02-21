@@ -85,7 +85,7 @@
 }
 
 .navigation__link--active::after {
-  content: "";
+  content: '';
   position: absolute;
   left: -9px;
   bottom: -29px;
@@ -95,7 +95,7 @@
 }
 
 .navigation__link--saved.navigation__link--active::after {
-  width: 155px; /* Wider to accommodate "Saved Articles" text */
+  width: 155px;  /* Wider to accommodate "Saved Articles" text */
 }
 
 .navigation__link--active.navigation__link--black::after {
