@@ -8,7 +8,10 @@
 
 .saved__news-cards-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Use minmax to prevent overflow */
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  ); /* Use minmax to prevent overflow */
   gap: 16px;
   width: 100%;
   max-width: 1280px;
@@ -21,6 +24,11 @@
 @media screen and (max-width: 768px) {
   .saved__news-card {
     padding: 40px 20px;
+  }
+
+  .saved__news-cards-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
   }
 }
 
