@@ -85,9 +85,9 @@
 }
 
 .navigation__link--active::after {
-  content: '';
+  content: "";
   position: absolute;
-  left: -9px;
+  left: -17px;
   bottom: -29px;
   width: 68px;
   height: 3px;
@@ -95,7 +95,7 @@
 }
 
 .navigation__link--saved.navigation__link--active::after {
-  width: 155px;  /* Wider to accommodate "Saved Articles" text */
+  width: 178px; /* Updated from 155px to match Figma design */
 }
 
 .navigation__link--active.navigation__link--black::after {
@@ -171,7 +171,20 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navigation {
-    padding: 30px 40px 26px;
+    padding: 16px 40px;
+  }
+
+  .navigation--saved-news {
+    padding: 14px 40px;
+  }
+
+  .navigation__logo {
+    height: 38px; /* Reduced from default size */
+  }
+
+  .navigation__logo--black,
+  .navigation__logo--white {
+    margin: 0; /* Remove margins to reduce height */
   }
 
   .navigation__user-container {
@@ -180,6 +193,15 @@
 
   .navigation__buttons {
     gap: 30px;
+  }
+
+  .navigation__button-loggedin {
+    height: 40px; /* Reduced height */
+  }
+
+  .navigation__link--saved.navigation__link--active::after {
+    width: 160px;
+    bottom: -24px; /* Adjusted to account for reduced padding */
   }
 }
 
@@ -201,6 +223,10 @@
   .navigation__link {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  .navigation__link--saved.navigation__link--active::after {
+    width: 160px; /* Adjusted width for tablet screens */
   }
 
   .navigation__buttons {
