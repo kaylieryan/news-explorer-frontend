@@ -15,11 +15,11 @@ const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
     <nav className="mobile">
       <div className="mobile__content">
         <div className="mobile__links">
-          <div className="mobile__link-NewsExplorer" onClick={handleCloseMenu}>
+          <div className="mobile__title" onClick={handleCloseMenu}>
             NewsExplorer
           </div>
           <button
-            className="mobile__link-NewsExplore-close"
+            className="mobile__close-button"
             onClick={handleCloseMenu}></button>
 
           <NavLink to="/" className="mobile__link" onClick={handleCloseMenu}>
@@ -34,13 +34,11 @@ const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
             </NavLink>
           )}
           {isLoggedIn ? (
-            <button className="mobile__button-loggedin" onClick={onLogout}>
-              <p className="mobile__user-loggedin">{currentUser.name}</p>
-              <img
-                src={logOutWhite}
-                alt="logout"
-                className="mobile__logout-icon"
-              />
+            <button
+              className="mobile__button--state-logged-in"
+              onClick={onLogout}>
+              <p className="mobile__username">{currentUser.name}</p>
+              <img src={logOutWhite} alt="logout" className="mobile__icon" />
             </button>
           ) : (
             <button className="mobile__button" onClick={onLoginClick}>
