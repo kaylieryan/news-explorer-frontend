@@ -58,7 +58,7 @@
   top: 24px;
 }
 
-.news-card__popup-text_hidden {
+.news-card__popup-text--hidden {
   display: none;
 }
 
@@ -97,7 +97,7 @@
   background: transparent url("../../assets/save_icon_hover.svg");
 }
 
-.news-card__button-bookmark_marked {
+.news-card__button-bookmark--marked {
   background: transparent url("../../assets/save_icon_marked.svg");
 }
 

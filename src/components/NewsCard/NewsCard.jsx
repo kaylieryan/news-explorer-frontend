@@ -57,7 +57,7 @@ function NewsCard({
             <div className="news-card__button-container">
               <div
                 className={`news-card__popup-text ${
-                  isHovered ? "" : "news-card__popup-text_hidden"
+                  isHovered ? "" : "news-card__popup-text--hidden"
                 }`}>
                 Remove from saved
               </div>
@@ -75,7 +75,7 @@ function NewsCard({
           <div className="news-card__button-container">
             <div
               className={`news-card__popup-text ${
-                isHovered ? "" : "news-card__popup-text_hidden"
+                isHovered ? "" : "news-card__popup-text--hidden"
               }`}>
               {savedArticles.some(
                 (savedArticles) => savedArticles.link === newsData.url
@@ -88,7 +88,7 @@ function NewsCard({
                 savedArticles.some(
                   (savedArticles) => savedArticles.link === newsData.url
                 )
-                  ? "news-card__button-bookmark_marked"
+                  ? "news-card__button-bookmark--marked"
                   : ""
               }`}
               onClick={
@@ -104,7 +104,7 @@ function NewsCard({
           <div className="news-card__button-container">
             <div
               className={`news-card__popup-text ${
-                isHovered ? "" : "news-card__popup-text_hidden"
+                isHovered ? "" : "news-card__popup-text--hidden"
               }`}>
               Sign in to save articles
             </div>
