@@ -69,10 +69,15 @@ const SignInModal = ({
           required
         />
       </label>
-      <button type="submit" onClick={onLogInClick} className="Login__button">
+      <button
+        type="submit"
+        onClick={onLogInClick}
+        className="sign-in-modal__login-button">
         Sign in
       </button>
-      <button onClick={onRegisterClick} className="Or-Sign-Up__button">
+      <button
+        onClick={onRegisterClick}
+        className="sign-in-modal__signup-button">
         {" "}
         or Sign up
       </button>

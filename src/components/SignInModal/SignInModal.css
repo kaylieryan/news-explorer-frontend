@@ -1,4 +1,4 @@
-.Login__button {
+.sign-in-modal__login-button {
   background-color: #2f71e5;
   color: #fff;
   padding: 20px 115px;
@@ -18,11 +18,11 @@
   transition: 0.25s ease-in-out;
 }
 
-.Login__button:hover {
+.sign-in-modal__login-button:hover {
   background-color: #e8e8e8;
 }
 
-.Or-Sign-Up__button {
+.sign-in-modal__signup-button {
   color: #2f71e5;
   border: none;
   cursor: pointer;
@@ -35,26 +35,26 @@
   margin-top: 20px;
 }
 
-.Or-Sign-Up__button:hover {
+.sign-in-modal__signup-button:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 768px) {
-  .Login__button {
+  .sign-in-modal__login-button {
     width: 358px;
     height: 64px;
     font-size: 16px;
     margin-top: 20px;
   }
 
-  .Or-Sign-Up__button {
+  .sign-in-modal__signup-button {
     font-size: 12px;
     margin-top: 15px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .Login__button {
+  .sign-in-modal__login-button {
     width: 288px;
     height: 56px;
     font-size: 16px;
@@ -62,7 +62,7 @@
     margin-left: 20px;
   }
 
-  .Or-Sign-Up__button {
+  .sign-in-modal__signup-button {
     font-size: 14px;
     margin-top: 10px;
     margin-right: 10px;
