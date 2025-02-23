@@ -38,7 +38,7 @@ const NewsCardList = ({
           <button
             className={`news-card-list__button ${
               cardsDisplayed >= searchResult.length
-                ? "news-card-list__button_hidden"
+                ? "news-card-list__button--hidden"
                 : ""
             }`}
             onClick={increaseVisibleCards}>
