@@ -11,7 +11,7 @@
   font-size: 18px;
 }
 
-.modal__content-success {
+.modal__content_type_success {
   position: relative;
   background-color: #fff;
   width: 430px;
@@ -19,7 +19,7 @@
   padding: 34px 36px 28px;
 }
 
-.modal__title-success {
+.modal__title_type_success {
   font-family: "Roboto", Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -32,7 +32,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .modal__content-success {
+  .modal__content_type_success {
     width: 282px;
   }
 }

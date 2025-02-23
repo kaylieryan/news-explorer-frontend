@@ -3,8 +3,8 @@ import "./SuccessfulModal.css";
 function SuccessfulModal({ isOpen, onClose, onLoginClick }) {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
-      <div className="modal__content-success">
-        <h2 className="modal__title-success">
+      <div className="modal__content modal__content_type_success">
+        <h2 className="modal__title modal__title_type_success">
           Registration successfullly completed!
         </h2>
         <button
