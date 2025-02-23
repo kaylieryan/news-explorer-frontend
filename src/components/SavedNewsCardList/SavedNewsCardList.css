@@ -8,10 +8,7 @@
 
 .saved__news-cards-container {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    minmax(0, 1fr)
-  ); /* Use minmax to prevent overflow */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   width: 100%;
   max-width: 1280px;
@@ -23,12 +20,18 @@
 
 @media screen and (max-width: 768px) {
   .saved__news-card {
-    padding: 40px 20px;
+    padding: 40px 40px 40px; /* Reduced bottom padding */
   }
 
   .saved__news-cards-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    gap: 8px; /* Reduced gap */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .saved__news-card {
+    padding: 20px 20px; /* Adjusted side padding and kept bottom padding */
   }
 }
 
