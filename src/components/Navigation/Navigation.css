@@ -48,11 +48,11 @@
   gap: 70px;
 }
 
-.navigation__menu-button {
+.navigation__button--menu {
   display: none;
 }
 
-.navigation__menu-button--saved-news {
+.navigation__button--menu-saved-news {
   display: none;
 }
 
@@ -102,7 +102,7 @@
   background-color: #000;
 }
 
-.navigation__button-signin {
+.navigation__button--sign-in {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +121,7 @@
   line-height: 24px;
 }
 
-.navigation__button-loggedin {
+.navigation__button--logged-in {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -130,7 +130,7 @@
   cursor: pointer;
 }
 
-.navigation__button-loggedin--black {
+.navigation__button--logged-in-black {
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -140,7 +140,7 @@
   background: transparent;
 }
 
-.navigation__button-loggedin--white {
+.navigation__button--logged-in-white {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
@@ -157,8 +157,8 @@
   font-size: 18px;
 }
 
-.navigation__button-signin.active,
-.navigation__button-signin:hover {
+.navigation__button--sign-in.active,
+.navigation__button--sign-in:hover {
   border: 1px solid #ffffff;
 }
 
@@ -167,6 +167,14 @@
   height: 24px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.navigation__button--menu-hidden {
+  display: none;
+}
+
+.navigation__button--menu-close {
+  background: url("../../assets/close.svg") center no-repeat !important;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -195,7 +203,7 @@
     gap: 30px;
   }
 
-  .navigation__button-loggedin {
+  .navigation__button--logged-in {
     height: 40px; /* Reduced height */
   }
 
@@ -233,12 +241,12 @@
     gap: 40px;
   }
 
-  .navigation__button-loggedin--white {
+  .navigation__button--logged-in-white {
     width: 100px;
     height: 40px;
   }
 
-  .navigation__button-loggedin--black {
+  .navigation__button--logged-in-black {
     width: 100px;
     height: 40px;
   }
@@ -248,7 +256,7 @@
     line-height: 20px;
   }
 
-  .navigation__button-signin {
+  .navigation__button--sign-in {
     padding: 10px;
     max-width: 145px;
     height: 40px;
@@ -272,7 +280,7 @@
     display: none;
   }
 
-  .navigation__menu-button {
+  .navigation__button--menu {
     display: flex;
     background: url("../../assets/menu_white.svg") center no-repeat;
     width: 24px;
@@ -283,12 +291,12 @@
   }
 
   .navigation__link,
-  .navigation__button-signin,
+  .navigation__button--sign-in,
   .navigation__logout-icon {
     display: none;
   }
 
-  .navigation__menu-button--saved-news {
+  .navigation__button--menu-saved-news {
     display: flex;
     background: transparent url("../../assets/menu_black.svg") center no-repeat;
     width: 24px;

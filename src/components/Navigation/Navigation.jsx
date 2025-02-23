@@ -50,16 +50,16 @@ function Navigation({ onLoginClick, onLogout }) {
       </nav>
       {currentPage === "/" ? (
         <button
-          className={`navigation__menu-button ${
-            activeModal === "" ? "navigation__menu-button--hidden" : ""
-          } ${mobileMenuOpen === true ? "navigation__menu-button--close" : ""}`}
+          className={`navigation__button--menu ${
+            activeModal === "" ? "navigation__button--menu-hidden" : ""
+          } ${mobileMenuOpen === true ? "navigation__button--menu-close" : ""}`}
           onClick={handleMobileMenu}
         />
       ) : (
         <button
-          className={`navigation__menu-button navigation__menu-button--saved-news ${
-            activeModal === "" ? "navigation__menu-button--hidden" : ""
-          } ${mobileMenuOpen === true ? "navigation__menu-button--close" : ""}`}
+          className={`navigation__button--menu navigation__button--menu-saved-news ${
+            activeModal === "" ? "navigation__button--menu-hidden" : ""
+          } ${mobileMenuOpen === true ? "navigation__button--menu-close" : ""}`}
           onClick={handleMobileMenu}
         />
       )}
@@ -89,8 +89,8 @@ function Navigation({ onLoginClick, onLogout }) {
             Saved Articles
           </NavLink>
           <button
-            className={`navigation__button-loggedin ${
-              currentPage === "/" ? "navigation__button-loggedin--white" : ""
+            className={`navigation__button--logged-in ${
+              currentPage === "/" ? "navigation__button--logged-in-white" : ""
             }`}
             onClick={onLogout}>
             <span className="navigation__username">{currentUser.name}</span>
@@ -122,8 +122,8 @@ function Navigation({ onLoginClick, onLogout }) {
             Saved Articles
           </NavLink>
           <button
-            className={`navigation__button-loggedin navigation__button-loggedin--black ${
-              currentPage === "/" ? "navigation__button-loggedin" : ""
+            className={`navigation__button--logged-in navigation__button--logged-in-black ${
+              currentPage === "/" ? "navigation__button--logged-in" : ""
             }`}
             onClick={onLogout}>
             <span className="navigation__username">{currentUser.name}</span>
@@ -148,7 +148,9 @@ function Navigation({ onLoginClick, onLogout }) {
             }>
             Home
           </NavLink>
-          <button className="navigation__button-signin" onClick={onLoginClick}>
+          <button
+            className="navigation__button--sign-in"
+            onClick={onLoginClick}>
             Sign in
           </button>
         </div>
