@@ -3,12 +3,6 @@
   background-color: white;
 }
 
-.saved-news-header__container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .saved-news-header__title {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;

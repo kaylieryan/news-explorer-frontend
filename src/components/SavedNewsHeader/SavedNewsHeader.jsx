@@ -30,8 +30,8 @@ function SavedNewsHeader() {
     <section className="saved-news-header">
       <h1 className="saved-news-header__title">Saved Articles</h1>
       <h2 className="saved-news-header__subtitle">
-        {currentUser.name}, you have {userArticles.length} saved articles
-        {userArticles.length === 1 ? "s" : ""}
+        {currentUser.name}, you have {userArticles.length} saved article
+        {userArticles.length !== 1 && "s"}
       </h2>
       <div className="saved-news-header__keywords-container">
         <p className="saved-news-header__keywords-title">By keywords:</p>
