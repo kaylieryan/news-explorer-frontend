@@ -46,7 +46,9 @@ function RegisterModal({
       <label htmlFor="email2" className="modal__label">
         Email
         <input
-          className={`modal__input ${errors.email ? "modal__input-error" : ""}`}
+          className={`modal__input ${
+            errors.email ? "modal__input_type_error" : ""
+          }`}
           type="email"
           name="email"
           id="email2"
@@ -85,10 +87,13 @@ function RegisterModal({
         />
         <span className="modal__error">{errors.username}</span>
       </label>
-      <button type="submit" className="SignUp__button">
+      <button type="submit" className="register-modal__signup-button">
         Sign up
       </button>
-      <button onClick={onLoginClick} type="button" className="Or-Login__button">
+      <button
+        onClick={onLoginClick}
+        type="button"
+        className="register-modal__login-button">
         {" "}
         or Log in
       </button>

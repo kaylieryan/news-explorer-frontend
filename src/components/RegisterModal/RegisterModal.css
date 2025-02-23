@@ -1,4 +1,4 @@
-.SignUp__button {
+.register-modal__signup-button {
   background: #2f71e5;
   padding: 20px 115px;
   border: 1px;
@@ -17,11 +17,11 @@
   line-height: 24px;
 }
 
-.SignUp__button:hover {
+.register-modal__signup-button:hover {
   background-color: #e8e8e8;
 }
 
-.Or-Login__button {
+.register-modal__login-button {
   color: #2f71e5;
   border: none;
   cursor: pointer;
@@ -36,26 +36,26 @@
   font-size: 14px;
 }
 
-.Or-Login__button:hover {
+.register-modal__login-button:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 768px) {
-  .SignUp__button {
+  .register-modal__signup-button {
     width: 358px;
     height: 64px;
     font-size: 16px;
     margin-top: 20px;
   }
 
-  .Or-Login__button {
+  .register-modal__login-button {
     font-size: 12px;
     margin-top: 15px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .SignUp__button {
+  .register-modal__signup-button {
     width: 288px;
     height: 56px;
     font-size: 16px;
@@ -63,7 +63,7 @@
     margin-left: 25px;
   }
 
-  .Or-Login__button {
+  .register-modal__login-button {
     font-size: 12px;
     margin-top: 15px;
   }
