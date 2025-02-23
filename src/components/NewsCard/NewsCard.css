@@ -191,6 +191,7 @@
     font-size: 14px;
     line-height: 20px;
     height: auto;
+    -webkit-line-clamp: 5;
     margin-bottom: 12px;
   }
 
