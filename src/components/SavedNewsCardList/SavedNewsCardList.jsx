@@ -8,8 +8,8 @@ function SavedNewsCardList({ handleRemoveArticle, handleSaveArticle }) {
   const { savedArticles } = useContext(savedArticlesContext);
   const { currentUser } = useContext(currentUserContext);
   return (
-    <section className="saved__news-card">
-      <div className="saved__news-cards-container">
+    <section className="news-card-list">
+      <div className="news-card-list__container">
         {savedArticles
           .filter((article) => article.owner === currentUser._id)
           .map((article, index) => (
