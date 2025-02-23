@@ -3,7 +3,7 @@
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
-  max-width: 400px;
+  max-width: none;
   height: auto;
   display: flex;
   gap: 20px;
@@ -168,6 +168,12 @@
   color: #b6bcbf;
 }
 
+@media screen and (min-width: 1024px) {
+  .news-card {
+    max-width: 400px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .news-card {
     max-width: 100%;
@@ -185,7 +191,6 @@
     font-size: 14px;
     line-height: 20px;
     height: auto;
-    -webkit-line-clamp: 5;
     margin-bottom: 12px;
   }
 
