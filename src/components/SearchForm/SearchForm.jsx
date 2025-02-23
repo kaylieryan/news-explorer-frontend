@@ -18,21 +18,21 @@ function SearchForm({ handleSearch }) {
   };
 
   return (
-    <div className="search">
-      <form action="" onSubmit={handleSubmit} className="search__form">
-        <div className="search__input-container">
-        <input
-          className="search__input"
-          type="text"
-          id="search"
-          value={keyword}
-          placeholder="Enter Topic"
-          onChange={handleKeyWord}
-          required
-        />
-        <button type="submit" className="search__submit-button">
-          Search
-        </button>
+    <div className="search-form">
+      <form className="search-form__container" onSubmit={handleSubmit}>
+        <div className="search-form__field">
+          <input
+            className="search-form__input"
+            type="text"
+            id="search"
+            value={keyword}
+            placeholder="Enter Topic"
+            onChange={handleKeyWord}
+            required
+          />
+          <button type="submit" className="search-form__button">
+            Search
+          </button>
         </div>
       </form>
     </div>
