@@ -183,10 +183,6 @@
   min-width: 176px;
 }
 
-.navigation__button--sign-in:hover {
-  opacity: 0.85;
-}
-
 .navigation__button--logged-in {
   display: flex;
   align-items: center;
@@ -322,10 +318,6 @@
 
   .navigation__buttons {
     gap: 40px;
-  }
-
-  .navigation__button--logged-in {
-    height: 40px;
   }
 
   .navigation__button--logged-in-white {
