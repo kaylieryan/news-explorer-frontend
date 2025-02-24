@@ -16,16 +16,26 @@ function MobileMenu({
 }) {
   return (
     <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
-      <div className="mobile-menu__content">
-        <div className="mobile-menu__header">
+      <div
+        className={`mobile-menu__content ${
+          isLoggedIn ? "mobile-menu__content--logged-in" : ""
+        }`}>
+        <div
+          className={`mobile-menu__header ${
+            isLoggedIn ? "mobile-menu__header--logged-in" : ""
+          }`}>
           <NavLink to="/" className="mobile-menu__logo-link" onClick={onClose}>
             <img
-              src={currentPage === "/" ? headerWhiteLogo : headerBlackLogo}
+              src={isLoggedIn ? headerBlackLogo : headerWhiteLogo}
               alt="NewsExplorer Logo"
               className="mobile-menu__logo"
             />
           </NavLink>
-          <button className="mobile-menu__close-button" onClick={onClose}>
+          <button
+            className={`mobile-menu__close-button ${
+              isLoggedIn ? "mobile-menu__close-button--logged-in" : ""
+            }`}
+            onClick={onClose}>
             <span className="mobile-menu__close-button-line"></span>
             <span className="mobile-menu__close-button-line"></span>
           </button>
@@ -36,7 +46,7 @@ function MobileMenu({
             to="/"
             className={`mobile-menu__link ${
               currentPage === "/" ? "mobile-menu__link--active" : ""
-            }`}
+            } ${isLoggedIn ? "mobile-menu__link--logged-in" : ""}`}
             onClick={onClose}>
             Home
           </NavLink>
@@ -46,7 +56,7 @@ function MobileMenu({
               to="/saved-news"
               className={`mobile-menu__link ${
                 currentPage === "/saved-news" ? "mobile-menu__link--active" : ""
-              }`}
+              } ${isLoggedIn ? "mobile-menu__link--logged-in" : ""}`}
               onClick={onClose}>
               Saved articles
             </NavLink>
@@ -54,18 +64,14 @@ function MobileMenu({
 
           {isLoggedIn ? (
             <button
-              className={`mobile-menu__button mobile-menu__button--logged-in ${
-                currentPage === "/"
-                  ? "mobile-menu__button--white"
-                  : "mobile-menu__button--black"
-              }`}
+              className={`mobile-menu__button mobile-menu__button--logged-in mobile-menu__button--black`}
               onClick={() => {
                 onLogout();
                 onClose();
               }}>
               <span className="mobile-menu__username">{currentUser.name}</span>
               <img
-                src={currentPage === "/" ? logOutWhite : logOutBlack}
+                src={logOutBlack}
                 alt="logout"
                 className="mobile-menu__logout-icon"
               />
