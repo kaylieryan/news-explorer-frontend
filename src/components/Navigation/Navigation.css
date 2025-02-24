@@ -174,7 +174,7 @@
 }
 
 .navigation__button--menu-close {
-  background: url("../../assets/close.svg") center no-repeat !important;
+  background: url("../../assets/close_button.svg") center no-repeat !important;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
