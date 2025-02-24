@@ -1,16 +1,16 @@
 import "./MobileMenu.css";
 import { NavLink } from "react-router-dom";
 
-function MobileMenu({ 
-  isOpen, 
-  currentPage, 
-  isLoggedIn, 
-  currentUser, 
-  onLoginClick, 
-  onLogout, 
+function MobileMenu({
+  isOpen,
+  currentPage,
+  isLoggedIn,
+  currentUser,
+  onLoginClick,
+  onLogout,
   onClose,
   logOutWhite,
-  logOutBlack 
+  logOutBlack,
 }) {
   return (
     <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
@@ -38,7 +38,9 @@ function MobileMenu({
         {isLoggedIn ? (
           <button
             className={`mobile-menu__button mobile-menu__button--logged-in ${
-              currentPage === "/" ? "mobile-menu__button--white" : "mobile-menu__button--black"
+              currentPage === "/"
+                ? "mobile-menu__button--white"
+                : "mobile-menu__button--black"
             }`}
             onClick={() => {
               onLogout();

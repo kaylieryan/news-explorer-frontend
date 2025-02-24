@@ -119,7 +119,7 @@ function Navigation({ onLoginClick, onLogout }) {
         </div>
       </div>
 
-      <MobileMenu 
+      <MobileMenu
         isOpen={menuOpen}
         currentPage={currentPage}
         isLoggedIn={isLoggedIn}
