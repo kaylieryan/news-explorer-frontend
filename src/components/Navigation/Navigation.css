@@ -493,7 +493,6 @@
     background-color: #1a1b22;
     padding: 16px;
     padding-top: 72px;
-    position: relative;
   }
 
   .navigation--saved-news .navigation__menu-content {
@@ -516,41 +515,5 @@
 
   .navigation__button--logged-in {
     margin: 16px;
-  }
-
-  .navigation__close-button {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .navigation__close-button::before,
-  .navigation__close-button::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    background-color: #fff;
-    top: 50%;
-    left: 0;
-  }
-
-  .navigation__close-button::before {
-    transform: rotate(45deg);
-  }
-
-  .navigation__close-button::after {
-    transform: rotate(-45deg);
-  }
-
-  .navigation--saved-news .navigation__close-button::before,
-  .navigation--saved-news .navigation__close-button::after {
-    background-color: #1A1B22;
   }
 }
