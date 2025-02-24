@@ -120,7 +120,7 @@
   font-family: "Roboto", Arial, sans-serif;
   line-height: 24px;
   text-decoration: none;
-  color: #B6BCBF;
+  color: #b6bcbf;
   display: flex;
   align-items: center;
   height: 48px;
@@ -132,7 +132,7 @@
 }
 
 .navigation__link--saved {
-  color: #B6BCBF;
+  color: #b6bcbf;
   width: 61.13px;
   padding: 0;
   margin: 0;
@@ -145,7 +145,7 @@
 
 .navigation__link--active {
   position: relative;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .navigation__link--active::after {
@@ -192,14 +192,14 @@
   border-radius: 100px;
   height: 48px;
   cursor: pointer;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   background-color: transparent;
 }
 
 .navigation__button--logged-in-white {
   background-color: transparent;
-  border-color: #FFFFFF;
-  color: #FFFFFF;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .navigation__button--logged-in-black {
@@ -212,7 +212,7 @@
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .navigation__button--sign-in.active,

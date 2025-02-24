@@ -64,7 +64,9 @@ function Navigation({ onLoginClick, onLogout }) {
           <NavLink
             to="/"
             className={`navigation__link ${
-              currentPage === "/" ? "navigation__link--active navigation__link--home" : ""
+              currentPage === "/"
+                ? "navigation__link--active navigation__link--home"
+                : ""
             }`}
             onClick={handleMenuClose}>
             Home
@@ -74,8 +76,12 @@ function Navigation({ onLoginClick, onLogout }) {
             <NavLink
               to="/saved-news"
               className={`navigation__link ${
-                currentPage === "/saved-news" ? "navigation__link--active navigation__link--saved" : ""
-              } ${currentPage === "/saved-news" ? "navigation__link--black" : ""}`}
+                currentPage === "/saved-news"
+                  ? "navigation__link--active navigation__link--saved"
+                  : ""
+              } ${
+                currentPage === "/saved-news" ? "navigation__link--black" : ""
+              }`}
               onClick={handleMenuClose}>
               Saved articles
             </NavLink>
@@ -84,8 +90,8 @@ function Navigation({ onLoginClick, onLogout }) {
           {isLoggedIn ? (
             <button
               className={`navigation__button navigation__button--logged-in ${
-                currentPage === "/" 
-                  ? "navigation__button--logged-in-white" 
+                currentPage === "/"
+                  ? "navigation__button--logged-in-white"
                   : "navigation__button--logged-in-black"
               }`}
               onClick={() => {
