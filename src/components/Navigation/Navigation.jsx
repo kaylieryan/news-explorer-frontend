@@ -61,6 +61,20 @@ function Navigation({ onLoginClick, onLogout }) {
           menuOpen ? "navigation__menu--open" : ""
         }`}>
         <div className="navigation__menu-content">
+          <div className="navigation__mobile-logo">
+            <img
+              src={headerWhiteLogo}
+              alt="NewsExplorer Logo"
+              className="navigation__logo navigation__logo--white"
+            />
+          </div>
+
+          <button 
+            className="navigation__close-button"
+            onClick={handleMenuClose}
+            aria-label="Close menu"
+          />
+
           <NavLink
             to="/"
             className={`navigation__link ${
