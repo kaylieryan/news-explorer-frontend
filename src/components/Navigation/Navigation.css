@@ -177,6 +177,14 @@
   background: url("../../assets/close_button.svg") center no-repeat !important;
 }
 
+.navigation__button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navigation {
     padding: 16px 40px;
@@ -283,26 +291,24 @@
   .navigation__button--menu {
     display: flex;
     background: url("../../assets/menu_white.svg") center no-repeat;
-    width: 24px;
-    height: 24px;
-    border: none;
-    cursor: pointer;
     margin-left: auto;
+  }
+
+  .navigation__button--menu-black {
+    background: url("../../assets/menu_black.svg") center no-repeat;
+  }
+
+  .navigation__button--close {
+    background: url("../../assets/close_button.svg") center no-repeat !important;
+  }
+
+  .navigation__button--hidden {
+    display: none;
   }
 
   .navigation__link,
   .navigation__button--sign-in,
   .navigation__logout-icon {
     display: none;
-  }
-
-  .navigation__button--menu-saved-news {
-    display: flex;
-    background: transparent url("../../assets/menu_black.svg") center no-repeat;
-    width: 24px;
-    height: 24px;
-    border: none;
-    cursor: pointer;
-    margin-left: 20px;
   }
 }

@@ -48,24 +48,27 @@ function Navigation({ onLoginClick, onLogout }) {
           </NavLink>
         )}
       </nav>
-      {currentPage === "/" ? (
-        <button
-          className={`navigation__button--menu ${
-            activeModal === "" ? "navigation__button--menu-hidden" : ""
-          } ${mobileMenuOpen === true ? "navigation__button--menu-close" : ""}`}
-          onClick={handleMobileMenu}
-        />
-      ) : (
-        <button
-          className={`navigation__button--menu navigation__button--menu-saved-news ${
-            activeModal === "" ? "navigation__button--menu-hidden" : ""
-          } ${mobileMenuOpen === true ? "navigation__button--menu-close" : ""}`}
-          onClick={handleMobileMenu}
-        />
-      )}
+      <button
+        className={`
+          navigation__button
+          navigation__button--menu
+          ${
+            currentPage === "/saved-news"
+              ? "navigation__button--menu-black"
+              : ""
+          }
+          ${activeModal === "" ? "navigation__button--hidden" : ""}
+          ${mobileMenuOpen ? "navigation__button--close" : ""}
+        `}
+        onClick={handleMobileMenu}
+      />
 
       {mobileMenuOpen && (
-        <MobileMenu onLoginClick={onLoginClick} onLogout={onLogout} />
+        <MobileMenu
+          onLoginClick={onLoginClick}
+          onLogout={onLogout}
+          onCloseMenu={closeMobileMenu}
+        />
       )}
 
       {isLoggedIn && currentPage === "/" ? (
