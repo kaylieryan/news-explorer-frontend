@@ -228,6 +228,27 @@
   opacity: 1;
 }
 
+.navigation--saved-news .navigation__link {
+  color: #1a1b22;
+}
+
+.navigation--saved-news .navigation__link--active {
+  color: #1a1b22;
+}
+
+.navigation--saved-news .navigation__link--saved {
+  color: #1a1b22;
+}
+
+.navigation--saved-news .navigation__link--active::after {
+  background-color: #1a1b22;
+  left: -26px;
+}
+
+.navigation--saved-news .navigation__username {
+  color: #1a1b22;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navigation {
     padding: 16px 40px;
