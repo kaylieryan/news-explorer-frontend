@@ -64,7 +64,7 @@ function Navigation({ onLoginClick, onLogout }) {
           <NavLink
             to="/"
             className={`navigation__link ${
-              currentPage === "/" ? "navigation__link--active" : ""
+              currentPage === "/" ? "navigation__link--active navigation__link--home" : ""
             }`}
             onClick={handleMenuClose}>
             Home
@@ -74,8 +74,8 @@ function Navigation({ onLoginClick, onLogout }) {
             <NavLink
               to="/saved-news"
               className={`navigation__link ${
-                currentPage === "/saved-news" ? "navigation__link--active" : ""
-              }`}
+                currentPage === "/saved-news" ? "navigation__link--active navigation__link--saved" : ""
+              } ${currentPage === "/saved-news" ? "navigation__link--black" : ""}`}
               onClick={handleMenuClose}>
               Saved Articles
             </NavLink>
@@ -83,10 +83,10 @@ function Navigation({ onLoginClick, onLogout }) {
 
           {isLoggedIn ? (
             <button
-              className={`navigation__button navigation__button--logout ${
-                currentPage === "/"
-                  ? "navigation__button--white"
-                  : "navigation__button--black"
+              className={`navigation__button navigation__button--logged-in ${
+                currentPage === "/" 
+                  ? "navigation__button--logged-in-white" 
+                  : "navigation__button--logged-in-black"
               }`}
               onClick={() => {
                 onLogout();
@@ -101,7 +101,7 @@ function Navigation({ onLoginClick, onLogout }) {
             </button>
           ) : (
             <button
-              className="navigation__button navigation__button--signin"
+              className="navigation__button navigation__button--sign-in"
               onClick={() => {
                 onLoginClick();
                 handleMenuClose();

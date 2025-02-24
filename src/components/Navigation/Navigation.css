@@ -26,7 +26,9 @@
 }
 
 .navigation__logo {
-  height: 40px;
+  width: 200px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .navigation__menu-button {
@@ -86,9 +88,8 @@
 }
 
 .navigation__logo--white {
-  margin-top: 16px;
-  margin-left: 10px;
-  margin-bottom: 11px;
+  padding: 30px 0 26px 0px;
+  margin: 0;
 }
 
 .navigation__logo--black {
@@ -119,6 +120,11 @@
   font-family: "Roboto", Arial, sans-serif;
   line-height: 24px;
   text-decoration: none;
+  color: #B6BCBF;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  white-space: nowrap;
 }
 
 .navigation__link--home {
@@ -126,21 +132,25 @@
 }
 
 .navigation__link--saved {
-  color: #ffffff;
+  color: #B6BCBF;
+  width: 61.13px;
+  padding: 0;
+  margin: 0;
 }
 
 .navigation__link--black {
-  color: black;
+  color: #000000;
 }
 
 .navigation__link--active {
   position: relative;
+  color: #FFFFFF;
 }
 
 .navigation__link--active::after {
   content: "";
   position: absolute;
-  left: -17px;
+  left: 0;
   bottom: -29px;
   width: 68px;
   height: 3px;
@@ -148,7 +158,7 @@
 }
 
 .navigation__link--saved.navigation__link--active::after {
-  width: 178px; /* Updated from 155px to match Figma design */
+  width: 178px;
 }
 
 .navigation__link--active.navigation__link--black::after {
@@ -178,36 +188,30 @@
   display: flex;
   align-items: center;
   padding: 0 20px;
-  border-radius: 25px;
-  height: 50px;
+  border-radius: 100px;
+  height: 48px;
   cursor: pointer;
-}
-
-.navigation__button--logged-in-black {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  border-radius: 25px;
-  height: 50px;
-  cursor: pointer;
-  background: transparent;
+  border: 1px solid #FFFFFF;
+  background-color: transparent;
 }
 
 .navigation__button--logged-in-white {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  font-family: "Roboto", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.3;
-  cursor: pointer;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.navigation__button--logged-in-black {
+  background-color: transparent;
+  border-color: #000000;
+  color: #000000;
 }
 
 .navigation__username {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
+  color: #FFFFFF;
 }
 
 .navigation__button--sign-in.active,
@@ -220,6 +224,7 @@
   height: 24px;
   margin-left: 10px;
   cursor: pointer;
+  opacity: 1;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -232,12 +237,12 @@
   }
 
   .navigation__logo {
-    height: 38px; /* Reduced from default size */
+    height: 38px;
   }
 
   .navigation__logo--black,
   .navigation__logo--white {
-    margin: 0; /* Remove margins to reduce height */
+    margin: 0;
   }
 
   .navigation__user-container {
@@ -249,12 +254,12 @@
   }
 
   .navigation__button--logged-in {
-    height: 40px; /* Reduced height */
+    height: 40px;
   }
 
   .navigation__link--saved.navigation__link--active::after {
     width: 160px;
-    bottom: -24px; /* Adjusted to account for reduced padding */
+    bottom: -24px;
   }
 }
 
@@ -278,7 +283,7 @@
   }
 
   .navigation__link--saved.navigation__link--active::after {
-    width: 160px; /* Adjusted width for tablet screens */
+    width: 160px;
   }
 
   .navigation__buttons {
