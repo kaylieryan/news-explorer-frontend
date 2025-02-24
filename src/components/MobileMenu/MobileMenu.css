@@ -1,4 +1,4 @@
-.mobile {
+/* .mobile {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -104,4 +104,85 @@
   width: 20px;
   height: 20px;
   margin-left: 30px;
+} */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.mobile-menu--open {
+  display: block;
+}
+
+.mobile-menu__content {
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #1a1b22;
+  padding: 16px;
+  padding-top: 72px;
+}
+
+.mobile-menu__link {
+  font-size: 18px;
+  padding: 16px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.mobile-menu__button {
+  margin: 16px;
+  height: 56px;
+  font-size: 18px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu__button--sign-in {
+  width: calc(100% - 32px);
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.mobile-menu__button--logged-in {
+  padding: 0 20px;
+  background: transparent;
+}
+
+.mobile-menu__button--white {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.mobile-menu__button--black {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.mobile-menu__username {
+  margin-right: 10px;
+}
+
+.mobile-menu__logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (min-width: 481px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }

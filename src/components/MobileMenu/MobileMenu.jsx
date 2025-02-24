@@ -1,54 +1,69 @@
 import "./MobileMenu.css";
-import logOutWhite from "../../assets/logout_white.svg";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
-import { currentUserContext } from "../../contexts/currentUserContext";
 
-const MobileMenu = ({ onLoginClick, onLogout, onCloseMenu }) => {
-  const { isLoggedIn, currentUser } = useContext(currentUserContext);
-
-  const handleCloseMenu = () => {
-    onCloseMenu();
-  };
-
+function MobileMenu({ 
+  isOpen, 
+  currentPage, 
+  isLoggedIn, 
+  currentUser, 
+  onLoginClick, 
+  onLogout, 
+  onClose,
+  logOutWhite,
+  logOutBlack 
+}) {
   return (
-    <nav className="mobile">
-      <div className="mobile__content">
-        <div className="mobile__links">
-          <div className="mobile__title" onClick={handleCloseMenu}>
-            NewsExplorer
-          </div>
-          <button
-            className="mobile__close-button"
-            onClick={handleCloseMenu}></button>
+    <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
+      <div className="mobile-menu__content">
+        <NavLink
+          to="/"
+          className={`mobile-menu__link ${
+            currentPage === "/" ? "mobile-menu__link--active" : ""
+          }`}
+          onClick={onClose}>
+          Home
+        </NavLink>
 
-          <NavLink to="/" className="mobile__link" onClick={handleCloseMenu}>
-            Home
+        {isLoggedIn && (
+          <NavLink
+            to="/saved-news"
+            className={`mobile-menu__link ${
+              currentPage === "/saved-news" ? "mobile-menu__link--active" : ""
+            }`}
+            onClick={onClose}>
+            Saved articles
           </NavLink>
-          {isLoggedIn && (
-            <NavLink
-              to="/saved-news"
-              className="mobile__link"
-              onClick={handleCloseMenu}>
-              Saved articles
-            </NavLink>
-          )}
-          {isLoggedIn ? (
-            <button
-              className="mobile__button--state-logged-in"
-              onClick={onLogout}>
-              <p className="mobile__username">{currentUser.name}</p>
-              <img src={logOutWhite} alt="logout" className="mobile__icon" />
-            </button>
-          ) : (
-            <button className="mobile__button" onClick={onLoginClick}>
-              Sign in
-            </button>
-          )}
-        </div>
+        )}
+
+        {isLoggedIn ? (
+          <button
+            className={`mobile-menu__button mobile-menu__button--logged-in ${
+              currentPage === "/" ? "mobile-menu__button--white" : "mobile-menu__button--black"
+            }`}
+            onClick={() => {
+              onLogout();
+              onClose();
+            }}>
+            <span className="mobile-menu__username">{currentUser.name}</span>
+            <img
+              src={currentPage === "/" ? logOutWhite : logOutBlack}
+              alt="logout"
+              className="mobile-menu__logout-icon"
+            />
+          </button>
+        ) : (
+          <button
+            className="mobile-menu__button mobile-menu__button--sign-in"
+            onClick={() => {
+              onLoginClick();
+              onClose();
+            }}>
+            Sign in
+          </button>
+        )}
       </div>
-    </nav>
+    </div>
   );
-};
+}
 
 export default MobileMenu;

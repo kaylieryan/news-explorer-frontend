@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { currentPageContext } from "../../contexts/currentPageContext";
 import { currentUserContext } from "../../contexts/currentUserContext";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 function Navigation({ onLoginClick, onLogout }) {
   const { currentPage } = useContext(currentPageContext);
@@ -117,6 +118,18 @@ function Navigation({ onLoginClick, onLogout }) {
           )}
         </div>
       </div>
+
+      <MobileMenu 
+        isOpen={menuOpen}
+        currentPage={currentPage}
+        isLoggedIn={isLoggedIn}
+        currentUser={currentUser}
+        onLoginClick={onLoginClick}
+        onLogout={onLogout}
+        onClose={handleMenuClose}
+        logOutWhite={logOutWhite}
+        logOutBlack={logOutBlack}
+      />
     </nav>
   );
 }
