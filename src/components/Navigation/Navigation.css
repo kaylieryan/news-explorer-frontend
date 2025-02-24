@@ -291,21 +291,27 @@
   }
 
   .navigation__menu-content {
-    gap: 20px;
+    gap: 16px;
   }
 
-  .navigation__logo--white {
+  /* .navigation__logo--white {
     margin-left: 30px;
     margin-top: 10px;
-  }
+  } */
 
   .navigation__link {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
+    height: 24px;
   }
 
-  .navigation__link--saved.navigation__link--active::after {
+  .navigation__link--home {
+    width: 64px;
+  }
+
+  .navigation__link--saved {
     width: 160px;
+    margin-right: 0;
   }
 
   .navigation__buttons {
@@ -334,6 +340,14 @@
     font-size: 16px;
     line-height: 20px;
     margin-top: 5px;
+  }
+
+  .navigation__link--active::after {
+    bottom: -28px;
+  }
+
+  .navigation--saved-news .navigation__link--active::after {
+    bottom: -28px;
   }
 }
 
