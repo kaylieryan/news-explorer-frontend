@@ -77,7 +77,7 @@ function Navigation({ onLoginClick, onLogout }) {
                 currentPage === "/saved-news" ? "navigation__link--active navigation__link--saved" : ""
               } ${currentPage === "/saved-news" ? "navigation__link--black" : ""}`}
               onClick={handleMenuClose}>
-              Saved Articles
+              Saved articles
             </NavLink>
           )}
 

@@ -79,7 +79,7 @@
 .navigation__menu-content {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 76px;
 }
 
 .navigation__logo {
@@ -136,6 +136,7 @@
   width: 61.13px;
   padding: 0;
   margin: 0;
+  margin-right: 64px;
 }
 
 .navigation__link--black {
@@ -150,8 +151,8 @@
 .navigation__link--active::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -29px;
+  left: -8px;
+  bottom: -16px;
   width: 68px;
   height: 3px;
   background-color: #fff;
