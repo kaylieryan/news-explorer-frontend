@@ -121,10 +121,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .modal {
-    background-color: black;
-  }
-
   .modal__content {
     width: 340px;
     height: 470px;
@@ -151,5 +147,13 @@
 
   .modal__label {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .modal__content {
+    width: 320px;
+    height: 560px;
+    padding: 34px 16px;
   }
 }
