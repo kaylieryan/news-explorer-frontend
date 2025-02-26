@@ -1,6 +1,5 @@
 import "./NewsCard.css";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { keywordContext } from "../../contexts/keyWordContext";
 import { savedArticlesContext } from "../../contexts/savedArticlesContext";
 import { currentPageContext } from "../../contexts/currentPageContext";
@@ -49,90 +48,106 @@ function NewsCard({
   }, [location.pathname, setCurrentPage]);
 
   return (
-    <div className="news-card__container">
-      <div className="news-card__image-container">
+    <section className="news-card">
+      {/* Controls container */}
+      <div className="news-card__controls">
         {currentPage === "/saved-news" && (
-          <div className="news-card__keyword-icon">{newsData.keyword}</div>
-        )}
-
-        <div className="news-card__btns">
-          {!isLoggedIn && currentPage === "/" && (
-            <div className="news-card__sign-in-icon">
+          <>
+            <h2 className="news-card__keyword">{newsData.keyword}</h2>
+            <div className="news-card__button-container">
               <div
                 className={`news-card__popup-text ${
                   isHovered ? "" : "news-card__popup-text--hidden"
                 }`}>
-                Sign in to save articles
+                Remove from saved
               </div>
               <button
-                className="news-card__button-bookmark"
-                onClick={onClick}
+                className="news-card__button-delete"
+                onClick={handleRemoveClick}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               />
             </div>
-          )}
+          </>
+        )}
 
-          {isLoggedIn && currentPage === "/" && (
+        {isLoggedIn && currentPage === "/" && (
+          <div className="news-card__button-container">
+            <div
+              className={`news-card__popup-text ${
+                isHovered ? "" : "news-card__popup-text--hidden"
+              }`}>
+              {savedArticles.some(
+                (savedArticles) => savedArticles.link === newsData.url
+              )
+                ? "Remove from saved"
+                : "Save article"}
+            </div>
             <button
-              className={
+              className={`news-card__button-bookmark ${
                 savedArticles.some(
                   (savedArticles) => savedArticles.link === newsData.url
                 )
-                  ? "news-card__save_active news-card__save"
-                  : "news-card__save"
-              }
+                  ? "news-card__button-bookmark--marked"
+                  : ""
+              }`}
               onClick={
                 newsData.isSaved ? handleRemoveClick : handleBookmarkClick
               }
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             />
-          )}
+          </div>
+        )}
 
-          {currentPage === "/saved-news" && (
+        {!isLoggedIn && (
+          <div className="news-card__button-container">
+            <div
+              className={`news-card__popup-text ${
+                isHovered ? "" : "news-card__popup-text--hidden"
+              }`}>
+              Sign in to save articles
+            </div>
             <button
-              className="news-card__delete"
-              onClick={handleRemoveClick}
+              className="news-card__button-bookmark"
+              onClick={onClick}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             />
-          )}
-        </div>
-
-        {newsData.urlToImage && (
-          <img
-            className="news-card__image"
-            src={newsData.urlToImage}
-            alt={newsData.title}
-          />
+          </div>
         )}
       </div>
 
-      <div className="news-card__text">
-        <span className="news-card__date">{formattedDate}</span>
-        <Link
-          to={newsData.url}
+      {/* Content container */}
+      <div className="news-card__content">
+        <a
+          className="news-card__link"
+          href={newsData.url}
           target="_blank"
-          rel="noreferrer"
-          className="news-card__title-link">
-          <h2 className="news-card__title">{newsData.title}</h2>
-        </Link>
-        <p className="news-card__description">
-          {newsData.text || newsData.description}
-        </p>
-        <span className="news-card__source">
-          {
-            (typeof newsData.source === "string"
-              ? newsData.source
-              : newsData.source.name || "Unknown Source"
-            )
-              .toUpperCase()
-              .split(".")[0]
-          }
-        </span>
+          rel="noreferrer">
+          {newsData.urlToImage && (
+            <img
+              className="news-card__image"
+              src={newsData.urlToImage}
+              alt={newsData.title}
+            />
+          )}
+
+          <header className="news-card__text">
+            <p className="news-card__date">{formattedDate}</p>
+            <h3 className="news-card__title">{newsData.title}</h3>
+            <p className="news-card__description">
+              {newsData.text || newsData.description}
+            </p>
+            {newsData.source && (
+              <p className="news-card__source">
+                {newsData.source.name || newsData.source}
+              </p>
+            )}
+          </header>
+        </a>
       </div>
-    </div>
+    </section>
   );
 }
 
