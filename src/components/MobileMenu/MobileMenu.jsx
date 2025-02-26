@@ -56,7 +56,11 @@ function MobileMenu({
             to="/"
             className={`mobile-menu__link ${
               currentPage === "/" ? "mobile-menu__link--active" : ""
-            } ${isLoggedIn ? "mobile-menu__link--logged-in" : ""}`}
+            } ${
+              isLoggedIn && currentPage === "/saved-news"
+                ? "mobile-menu__link--logged-in"
+                : ""
+            }`}
             onClick={onClose}>
             Home
           </NavLink>
