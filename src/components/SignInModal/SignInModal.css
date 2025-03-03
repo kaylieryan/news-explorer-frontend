@@ -1,0 +1,70 @@
+.sign-in-modal__login-button {
+  background-color: #2f71e5;
+  color: #fff;
+  padding: 20px 115px;
+  border: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  opacity: 100%;
+  width: 358px;
+  height: 64px;
+  margin-left: 35px;
+  font-size: 18px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+  transition: 0.25s ease-in-out;
+}
+
+.sign-in-modal__login-button:hover {
+  background-color: #e8e8e8;
+}
+
+.sign-in-modal__signup-button {
+  color: #2f71e5;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 14px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 400;
+  opacity: 100%;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sign-in-modal__signup-button:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .sign-in-modal__login-button {
+    width: 358px;
+    height: 64px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .sign-in-modal__signup-button {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sign-in-modal__login-button {
+    width: 288px;
+    height: 56px;
+    font-size: 16px;
+    margin-top: auto;
+    margin-left: 20px;
+  }
+
+  .sign-in-modal__signup-button {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
